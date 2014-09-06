@@ -3,6 +3,8 @@ Cars Catalog iOS app
 
 Cars Catalog app
 
+![Cars Catalog app icon](https://raw.githubusercontent.com/wevtimoteo/cars-catalog/master/cars_catalog.png)
+
 ## Setup
 
 Install CocoaPods with the following command:
