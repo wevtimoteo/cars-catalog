@@ -15,10 +15,7 @@
 		7569DD1E19BB6D61004C502C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7569DD1C19BB6D61004C502C /* InfoPlist.strings */; };
 		7569DD2019BB6D61004C502C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7569DD1F19BB6D61004C502C /* main.m */; };
 		7569DD2419BB6D61004C502C /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7569DD2319BB6D61004C502C /* CCAppDelegate.m */; };
-		7569DD2719BB6D61004C502C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7569DD2519BB6D61004C502C /* Main.storyboard */; };
 		7569DD2A19BB6D61004C502C /* Cars_Catalog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7569DD2819BB6D61004C502C /* Cars_Catalog.xcdatamodeld */; };
-		7569DD2D19BB6D61004C502C /* CCMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7569DD2C19BB6D61004C502C /* CCMasterViewController.m */; };
-		7569DD3019BB6D61004C502C /* CCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7569DD2F19BB6D61004C502C /* CCDetailViewController.m */; };
 		7569DD3219BB6D61004C502C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7569DD3119BB6D61004C502C /* Images.xcassets */; };
 		7569DD3919BB6D61004C502C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD3819BB6D61004C502C /* XCTest.framework */; };
 		7569DD3A19BB6D61004C502C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1119BB6D60004C502C /* Foundation.framework */; };
@@ -54,12 +51,7 @@
 		7569DD2119BB6D61004C502C /* Cars-Catalog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cars-Catalog-Prefix.pch"; sourceTree = "<group>"; };
 		7569DD2219BB6D61004C502C /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
 		7569DD2319BB6D61004C502C /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
-		7569DD2619BB6D61004C502C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7569DD2919BB6D61004C502C /* Cars_Catalog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cars_Catalog.xcdatamodel; sourceTree = "<group>"; };
-		7569DD2B19BB6D61004C502C /* CCMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMasterViewController.h; sourceTree = "<group>"; };
-		7569DD2C19BB6D61004C502C /* CCMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCMasterViewController.m; sourceTree = "<group>"; };
-		7569DD2E19BB6D61004C502C /* CCDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCDetailViewController.h; sourceTree = "<group>"; };
-		7569DD2F19BB6D61004C502C /* CCDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCDetailViewController.m; sourceTree = "<group>"; };
 		7569DD3119BB6D61004C502C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7569DD3719BB6D61004C502C /* Cars-CatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cars-CatalogTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7569DD3819BB6D61004C502C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -141,11 +133,6 @@
 				75F7F56319BCCA350036C25B /* Screens */,
 				7569DD2219BB6D61004C502C /* CCAppDelegate.h */,
 				7569DD2319BB6D61004C502C /* CCAppDelegate.m */,
-				7569DD2519BB6D61004C502C /* Main.storyboard */,
-				7569DD2B19BB6D61004C502C /* CCMasterViewController.h */,
-				7569DD2C19BB6D61004C502C /* CCMasterViewController.m */,
-				7569DD2E19BB6D61004C502C /* CCDetailViewController.h */,
-				7569DD2F19BB6D61004C502C /* CCDetailViewController.m */,
 				7569DD3119BB6D61004C502C /* Images.xcassets */,
 				7569DD2819BB6D61004C502C /* Cars_Catalog.xcdatamodeld */,
 				7569DD1A19BB6D61004C502C /* Supporting Files */,
@@ -282,7 +269,6 @@
 			files = (
 				7569DD3219BB6D61004C502C /* Images.xcassets in Resources */,
 				7569DD1E19BB6D61004C502C /* InfoPlist.strings in Resources */,
-				7569DD2719BB6D61004C502C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,9 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7569DD2D19BB6D61004C502C /* CCMasterViewController.m in Sources */,
 				75F7F56719BCCA8B0036C25B /* CCCarsViewController.m in Sources */,
-				7569DD3019BB6D61004C502C /* CCDetailViewController.m in Sources */,
 				7569DD2419BB6D61004C502C /* CCAppDelegate.m in Sources */,
 				7569DD2A19BB6D61004C502C /* Cars_Catalog.xcdatamodeld in Sources */,
 				7569DD2019BB6D61004C502C /* main.m in Sources */,
@@ -398,14 +382,6 @@
 				7569DD1D19BB6D61004C502C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7569DD2519BB6D61004C502C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7569DD2619BB6D61004C502C /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		7569DD4219BB6D61004C502C /* InfoPlist.strings */ = {
