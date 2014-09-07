@@ -8,8 +8,6 @@
 
 #import "CCAppDelegate.h"
 
-#import "CCMasterViewController.h"
-
 @implementation CCAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
