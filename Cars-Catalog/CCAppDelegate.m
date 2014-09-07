@@ -18,13 +18,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    CCMasterViewController *controller = (CCMasterViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+    [self displayNavigation];
+
     return YES;
 }
-							
+
+- (void)displayNavigation
+{
+    self.navigationController = [[UINavigationController alloc] init];
+    self.carsViewController = [[CCCarsViewController alloc] init];
+    self.window.rootViewController = self.navigationController;
+    [self.navigationController pushViewController:self.carsViewController animated:YES];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
