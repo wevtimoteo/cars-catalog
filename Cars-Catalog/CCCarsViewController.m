@@ -14,15 +14,17 @@
 
 @implementation CCCarsViewController
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
+    [self setupAppearance];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
+#pragma mark - Setup appearance
 
+- (void)setupAppearance
+{
+    self.view.backgroundColor = [UIColor whiteColor];
+}
 
 @end
