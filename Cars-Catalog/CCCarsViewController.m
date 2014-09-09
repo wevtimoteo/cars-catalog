@@ -8,11 +8,9 @@
 
 #import "CCCarsViewController.h"
 
-@interface CCCarsViewController ()
-
-@end
-
 @implementation CCCarsViewController
+
+static NSString *const CellIdentifier = @"CarCell";
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -24,7 +22,40 @@
 
 - (void)setupAppearance
 {
+    self.navigationItem.title = @"Cars List";
     self.view.backgroundColor = [UIColor whiteColor];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+
+    cell.textLabel.text = @"Awesome Car";
+
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50.f;
 }
 
 @end
