@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "CCRequestTarget.h"
+#import "CCHttpClient.h"
 
 @interface CCCarsRequest : NSObject
 
 @property (assign, nonatomic) UITableViewController<CCRequestTarget> *target;
+@property (strong, nonatomic) NSArray *cars;
+@property (strong, nonatomic) CCHttpClient *httpClient;
 
 + (CCCarsRequest *)buildWithRequestTarget:(UITableViewController<CCRequestTarget> *)target;
+- (NSInteger)count;
+- (void)refresh;
 
 @end
