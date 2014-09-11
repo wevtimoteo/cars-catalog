@@ -23,6 +23,7 @@
 		7569DD3C19BB6D61004C502C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1719BB6D61004C502C /* CoreData.framework */; };
 		7569DD4419BB6D61004C502C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7569DD4219BB6D61004C502C /* InfoPlist.strings */; };
 		7569DD4619BB6D61004C502C /* Cars_CatalogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7569DD4519BB6D61004C502C /* Cars_CatalogTests.m */; };
+		75A16FD119C127F0001708A7 /* CCHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FD019C127F0001708A7 /* CCHttpClient.m */; };
 		75F7F56719BCCA8B0036C25B /* CCCarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */; };
 		ABD82A53BF714E4DB5A441A3 /* libPods-Cars-Catalog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19252721C5C409EA8D73EED /* libPods-Cars-Catalog.a */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,8 @@
 		7569DD4119BB6D61004C502C /* Cars-CatalogTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cars-CatalogTests-Info.plist"; sourceTree = "<group>"; };
 		7569DD4319BB6D61004C502C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7569DD4519BB6D61004C502C /* Cars_CatalogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cars_CatalogTests.m; sourceTree = "<group>"; };
+		75A16FCF19C127F0001708A7 /* CCHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHttpClient.h; sourceTree = "<group>"; };
+		75A16FD019C127F0001708A7 /* CCHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHttpClient.m; sourceTree = "<group>"; };
 		75F7F56519BCCA8B0036C25B /* CCCarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarsViewController.h; sourceTree = "<group>"; };
 		75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarsViewController.m; sourceTree = "<group>"; };
 		8EEBD89704C54C7AAB36370B /* libPods-Cars-CatalogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cars-CatalogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +133,7 @@
 		7569DD1919BB6D61004C502C /* Cars-Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				75A16FCE19C127D5001708A7 /* Infrastructure */,
 				75F7F56319BCCA350036C25B /* Screens */,
 				7569DD2219BB6D61004C502C /* CCAppDelegate.h */,
 				7569DD2319BB6D61004C502C /* CCAppDelegate.m */,
@@ -167,6 +171,15 @@
 				7569DD4219BB6D61004C502C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75A16FCE19C127D5001708A7 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				75A16FCF19C127F0001708A7 /* CCHttpClient.h */,
+				75A16FD019C127F0001708A7 /* CCHttpClient.m */,
+			);
+			name = Infrastructure;
 			sourceTree = "<group>";
 		};
 		75F7F56319BCCA350036C25B /* Screens */ = {
@@ -351,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75F7F56719BCCA8B0036C25B /* CCCarsViewController.m in Sources */,
+				75A16FD119C127F0001708A7 /* CCHttpClient.m in Sources */,
 				7569DD2419BB6D61004C502C /* CCAppDelegate.m in Sources */,
 				7569DD2A19BB6D61004C502C /* Cars_Catalog.xcdatamodeld in Sources */,
 				7569DD2019BB6D61004C502C /* main.m in Sources */,
