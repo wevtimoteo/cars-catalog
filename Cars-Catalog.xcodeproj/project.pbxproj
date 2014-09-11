@@ -26,6 +26,7 @@
 		75A16FD119C127F0001708A7 /* CCHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FD019C127F0001708A7 /* CCHttpClient.m */; };
 		75A16FD419C12F19001708A7 /* CCSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FD319C12F19001708A7 /* CCSettings.m */; };
 		75A16FD619C1308C001708A7 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A16FD519C1308C001708A7 /* Settings.plist */; };
+		75A16FD919C136EF001708A7 /* CCCarsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FD819C136EF001708A7 /* CCCarsRequest.m */; };
 		75F7F56719BCCA8B0036C25B /* CCCarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */; };
 		ABD82A53BF714E4DB5A441A3 /* libPods-Cars-Catalog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19252721C5C409EA8D73EED /* libPods-Cars-Catalog.a */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,9 @@
 		75A16FD219C12F19001708A7 /* CCSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSettings.h; sourceTree = "<group>"; };
 		75A16FD319C12F19001708A7 /* CCSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSettings.m; sourceTree = "<group>"; };
 		75A16FD519C1308C001708A7 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		75A16FD719C136EF001708A7 /* CCCarsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarsRequest.h; sourceTree = "<group>"; };
+		75A16FD819C136EF001708A7 /* CCCarsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarsRequest.m; sourceTree = "<group>"; };
+		75A16FDB19C13967001708A7 /* CCRequestTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRequestTarget.h; sourceTree = "<group>"; };
 		75F7F56519BCCA8B0036C25B /* CCCarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarsViewController.h; sourceTree = "<group>"; };
 		75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarsViewController.m; sourceTree = "<group>"; };
 		8EEBD89704C54C7AAB36370B /* libPods-Cars-CatalogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cars-CatalogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +190,7 @@
 				75A16FD019C127F0001708A7 /* CCHttpClient.m */,
 				75A16FD219C12F19001708A7 /* CCSettings.h */,
 				75A16FD319C12F19001708A7 /* CCSettings.m */,
+				75A16FDB19C13967001708A7 /* CCRequestTarget.h */,
 			);
 			name = Infrastructure;
 			sourceTree = "<group>";
@@ -203,6 +208,8 @@
 			children = (
 				75F7F56519BCCA8B0036C25B /* CCCarsViewController.h */,
 				75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */,
+				75A16FD719C136EF001708A7 /* CCCarsRequest.h */,
+				75A16FD819C136EF001708A7 /* CCCarsRequest.m */,
 			);
 			name = Cars;
 			sourceTree = "<group>";
@@ -374,6 +381,7 @@
 			files = (
 				75A16FD419C12F19001708A7 /* CCSettings.m in Sources */,
 				75F7F56719BCCA8B0036C25B /* CCCarsViewController.m in Sources */,
+				75A16FD919C136EF001708A7 /* CCCarsRequest.m in Sources */,
 				75A16FD119C127F0001708A7 /* CCHttpClient.m in Sources */,
 				7569DD2419BB6D61004C502C /* CCAppDelegate.m in Sources */,
 				7569DD2A19BB6D61004C502C /* Cars_Catalog.xcdatamodeld in Sources */,
