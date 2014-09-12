@@ -7,6 +7,7 @@
 //
 
 #import "CCCarsRequest.h"
+#import "CCCar.h"
 #import "CCSettings.h"
 
 @implementation CCCarsRequest
@@ -30,8 +31,9 @@
     NSMutableArray *cars = [[NSMutableArray alloc] init];
 
     [self.httpClient get:[CCSettings carsAddress] success:^(AFHTTPRequestOperation *operation, id response) {
-        for (NSDictionary *car in response[@"results"]) {
-            // Instantiate Car model and add it to array
+        for (NSDictionary *each in response[@"results"]) {
+            CCCar *car = [[CCCar alloc] initFromDictionary:each];
+            [cars addObject:car];
         }
         self.cars = [[NSArray alloc] initWithArray:cars];
         [self.target dataRefreshed:CCResponseSuccess];
