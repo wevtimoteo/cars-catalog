@@ -22,11 +22,12 @@
 		7569DD3B19BB6D61004C502C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1519BB6D61004C502C /* UIKit.framework */; };
 		7569DD3C19BB6D61004C502C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1719BB6D61004C502C /* CoreData.framework */; };
 		7569DD4419BB6D61004C502C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7569DD4219BB6D61004C502C /* InfoPlist.strings */; };
-		7569DD4619BB6D61004C502C /* Cars_CatalogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7569DD4519BB6D61004C502C /* Cars_CatalogTests.m */; };
 		75A16FD119C127F0001708A7 /* CCHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FD019C127F0001708A7 /* CCHttpClient.m */; };
 		75A16FD419C12F19001708A7 /* CCSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FD319C12F19001708A7 /* CCSettings.m */; };
 		75A16FD619C1308C001708A7 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A16FD519C1308C001708A7 /* Settings.plist */; };
 		75A16FD919C136EF001708A7 /* CCCarsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FD819C136EF001708A7 /* CCCarsRequest.m */; };
+		75A16FDF19C30E08001708A7 /* CCCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FDE19C30E08001708A7 /* CCCar.m */; };
+		75A16FE119C31476001708A7 /* CCCarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FE019C31476001708A7 /* CCCarTests.m */; };
 		75F7F56719BCCA8B0036C25B /* CCCarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */; };
 		ABD82A53BF714E4DB5A441A3 /* libPods-Cars-Catalog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19252721C5C409EA8D73EED /* libPods-Cars-Catalog.a */; };
 /* End PBXBuildFile section */
@@ -61,7 +62,6 @@
 		7569DD3819BB6D61004C502C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7569DD4119BB6D61004C502C /* Cars-CatalogTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cars-CatalogTests-Info.plist"; sourceTree = "<group>"; };
 		7569DD4319BB6D61004C502C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7569DD4519BB6D61004C502C /* Cars_CatalogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cars_CatalogTests.m; sourceTree = "<group>"; };
 		75A16FCF19C127F0001708A7 /* CCHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHttpClient.h; sourceTree = "<group>"; };
 		75A16FD019C127F0001708A7 /* CCHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHttpClient.m; sourceTree = "<group>"; };
 		75A16FD219C12F19001708A7 /* CCSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSettings.h; sourceTree = "<group>"; };
@@ -70,6 +70,9 @@
 		75A16FD719C136EF001708A7 /* CCCarsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarsRequest.h; sourceTree = "<group>"; };
 		75A16FD819C136EF001708A7 /* CCCarsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarsRequest.m; sourceTree = "<group>"; };
 		75A16FDB19C13967001708A7 /* CCRequestTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRequestTarget.h; sourceTree = "<group>"; };
+		75A16FDD19C30E08001708A7 /* CCCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCar.h; sourceTree = "<group>"; };
+		75A16FDE19C30E08001708A7 /* CCCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCar.m; sourceTree = "<group>"; };
+		75A16FE019C31476001708A7 /* CCCarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarTests.m; sourceTree = "<group>"; };
 		75F7F56519BCCA8B0036C25B /* CCCarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarsViewController.h; sourceTree = "<group>"; };
 		75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarsViewController.m; sourceTree = "<group>"; };
 		8EEBD89704C54C7AAB36370B /* libPods-Cars-CatalogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cars-CatalogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,12 +145,13 @@
 		7569DD1919BB6D61004C502C /* Cars-Catalog */ = {
 			isa = PBXGroup;
 			children = (
-				75A16FCE19C127D5001708A7 /* Infrastructure */,
-				75F7F56319BCCA350036C25B /* Screens */,
 				7569DD2219BB6D61004C502C /* CCAppDelegate.h */,
 				7569DD2319BB6D61004C502C /* CCAppDelegate.m */,
 				7569DD3119BB6D61004C502C /* Images.xcassets */,
 				7569DD2819BB6D61004C502C /* Cars_Catalog.xcdatamodeld */,
+				75A16FCE19C127D5001708A7 /* Infrastructure */,
+				75A16FDC19C30DF2001708A7 /* Models */,
+				75F7F56319BCCA350036C25B /* Screens */,
 				7569DD1A19BB6D61004C502C /* Supporting Files */,
 			);
 			path = "Cars-Catalog";
@@ -168,7 +172,7 @@
 		7569DD3F19BB6D61004C502C /* Cars-CatalogTests */ = {
 			isa = PBXGroup;
 			children = (
-				7569DD4519BB6D61004C502C /* Cars_CatalogTests.m */,
+				75A16FE019C31476001708A7 /* CCCarTests.m */,
 				7569DD4019BB6D61004C502C /* Supporting Files */,
 			);
 			path = "Cars-CatalogTests";
@@ -188,11 +192,20 @@
 			children = (
 				75A16FCF19C127F0001708A7 /* CCHttpClient.h */,
 				75A16FD019C127F0001708A7 /* CCHttpClient.m */,
+				75A16FDB19C13967001708A7 /* CCRequestTarget.h */,
 				75A16FD219C12F19001708A7 /* CCSettings.h */,
 				75A16FD319C12F19001708A7 /* CCSettings.m */,
-				75A16FDB19C13967001708A7 /* CCRequestTarget.h */,
 			);
 			name = Infrastructure;
+			sourceTree = "<group>";
+		};
+		75A16FDC19C30DF2001708A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75A16FDD19C30E08001708A7 /* CCCar.h */,
+				75A16FDE19C30E08001708A7 /* CCCar.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		75F7F56319BCCA350036C25B /* Screens */ = {
@@ -385,6 +398,7 @@
 				75A16FD119C127F0001708A7 /* CCHttpClient.m in Sources */,
 				7569DD2419BB6D61004C502C /* CCAppDelegate.m in Sources */,
 				7569DD2A19BB6D61004C502C /* Cars_Catalog.xcdatamodeld in Sources */,
+				75A16FDF19C30E08001708A7 /* CCCar.m in Sources */,
 				7569DD2019BB6D61004C502C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,7 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7569DD4619BB6D61004C502C /* Cars_CatalogTests.m in Sources */,
+				75A16FE119C31476001708A7 /* CCCarTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
