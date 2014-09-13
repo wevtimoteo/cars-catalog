@@ -7,7 +7,6 @@
 //
 
 #import "CCCarsRequest.h"
-#import "CCCar.h"
 #import "CCSettings.h"
 
 @implementation CCCarsRequest
@@ -19,6 +18,11 @@
     carsRequest.httpClient = [[CCHttpClient alloc] init];
 
     return carsRequest;
+}
+
+- (CCCarsRequest *)atIndex:(NSInteger)index
+{
+    return self.cars[index];
 }
 
 - (NSInteger)count

@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Weverton Couto Timoteo. All rights reserved.
 //
 
+#import <AFNetworkActivityLogger/AFNetworkActivityLogger.h>
 #import "CCAppDelegate.h"
 
 @implementation CCAppDelegate
@@ -16,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self logNetworkActivity];
     [self displayNavigation];
 
     return YES;
@@ -150,6 +152,14 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - AFNetworking Activity Logger
+
+- (void)logNetworkActivity
+{
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
+    [[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelDebug];
 }
 
 @end
