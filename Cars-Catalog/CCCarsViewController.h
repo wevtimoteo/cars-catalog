@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CCCarsRequest.h"
 
-@interface CCCarsViewController : UIViewController
+@interface CCCarsViewController : UITableViewController <CCRequestTarget>
+
+@property (strong, nonatomic) CCCarsRequest *carsRequest;
 
 @end

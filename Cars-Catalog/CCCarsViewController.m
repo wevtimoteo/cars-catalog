@@ -8,23 +8,96 @@
 
 #import "CCCarsViewController.h"
 
-@interface CCCarsViewController ()
-
-@end
-
 @implementation CCCarsViewController
 
-- (void)viewWillAppear:(BOOL)animated
+static NSString *const CellIdentifier = @"CarCell";
+
+- (id)init
 {
-    [super viewWillAppear:animated];
+    self = [super init];
+    if (self) {
+        self.carsRequest = [CCCarsRequest buildWithRequestTarget:self];
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    [self setupRefreshControl];
+    [self handleRefresh];
     [self setupAppearance];
+}
+
+#pragma mark - Refresh control
+
+- (void)handleRefresh
+{
+    [self.refreshControl beginRefreshing];
+    [self.carsRequest refresh];
+}
+
+- (void)setupRefreshControl
+{
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(handleRefresh) forControlEvents:UIControlEventValueChanged];
+    [self setRefreshControl:refreshControl];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView*)scrollView
+{
+    if ([self.refreshControl isRefreshing]) {
+        [self handleRefresh];
+    }
+}
+
+#pragma mark - Fetch data
+
+- (void)dataRefreshed:(CCResponseStatus)status
+{
+    [self.refreshControl endRefreshing];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Setup appearance
 
 - (void)setupAppearance
 {
+    self.navigationItem.title = @"Cars List";
     self.view.backgroundColor = [UIColor whiteColor];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.carsRequest count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+
+    cell.textLabel.text = [self.carsRequest atIndex:indexPath.row].modelName;
+
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50.f;
 }
 
 @end
