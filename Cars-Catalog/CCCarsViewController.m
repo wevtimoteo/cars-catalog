@@ -12,10 +12,52 @@
 
 static NSString *const CellIdentifier = @"CarCell";
 
-- (void)viewWillAppear:(BOOL)animated
+- (id)init
 {
-    [super viewWillAppear:animated];
+    self = [super init];
+    if (self) {
+        self.carsRequest = [CCCarsRequest buildWithRequestTarget:self];
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    [self setupRefreshControl];
+    [self handleRefresh];
     [self setupAppearance];
+}
+
+#pragma mark - Refresh control
+
+- (void)handleRefresh
+{
+    [self.refreshControl beginRefreshing];
+    [self.carsRequest refresh];
+}
+
+- (void)setupRefreshControl
+{
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(handleRefresh) forControlEvents:UIControlEventValueChanged];
+    [self setRefreshControl:refreshControl];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView*)scrollView
+{
+    if ([self.refreshControl isRefreshing]) {
+        [self handleRefresh];
+    }
+}
+
+#pragma mark - Fetch data
+
+- (void)dataRefreshed:(CCResponseStatus)status
+{
+    [self.refreshControl endRefreshing];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Setup appearance
@@ -35,7 +77,7 @@ static NSString *const CellIdentifier = @"CarCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [self.carsRequest count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -46,7 +88,7 @@ static NSString *const CellIdentifier = @"CarCell";
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 
-    cell.textLabel.text = @"Awesome Car";
+    cell.textLabel.text = [self.carsRequest atIndex:indexPath.row].modelName;
 
     return cell;
 }
