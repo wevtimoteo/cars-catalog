@@ -7,6 +7,7 @@
 //
 
 #import "CCCarsViewController.h"
+#import "CCCarFormViewController.h"
 
 @implementation CCCarsViewController
 
@@ -110,6 +111,8 @@ static NSString *const CellIdentifier = @"CarCell";
 
 - (void)goToAddCar
 {
+    CCCarFormViewController *carFormViewController = [[CCCarFormViewController alloc] init];
+    [self.navigationController pushViewController:carFormViewController animated:YES];
 }
 
 @end
