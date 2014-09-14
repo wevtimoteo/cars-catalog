@@ -28,6 +28,7 @@ static NSString *const CellIdentifier = @"CarCell";
     [self setupRefreshControl];
     [self handleRefresh];
     [self setupAppearance];
+    [self setupNavigationItems];
 }
 
 #pragma mark - Refresh control
@@ -68,6 +69,11 @@ static NSString *const CellIdentifier = @"CarCell";
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+- (void)setupNavigationItems
+{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(goToAddCar)];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -98,6 +104,12 @@ static NSString *const CellIdentifier = @"CarCell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 50.f;
+}
+
+#pragma mark - Navigation
+
+- (void)goToAddCar
+{
 }
 
 @end
