@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		714AAED927644C1187F3371F /* libPods-Cars-CatalogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEBD89704C54C7AAB36370B /* libPods-Cars-CatalogTests.a */; };
+		754F02BA19C61162006AB654 /* CCCarFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F02B819C61162006AB654 /* CCCarFormViewController.m */; };
+		754F02BB19C61162006AB654 /* CCCarFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754F02B919C61162006AB654 /* CCCarFormViewController.xib */; };
 		7569DD1219BB6D61004C502C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1119BB6D60004C502C /* Foundation.framework */; };
 		7569DD1419BB6D61004C502C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1319BB6D61004C502C /* CoreGraphics.framework */; };
 		7569DD1619BB6D61004C502C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1519BB6D61004C502C /* UIKit.framework */; };
@@ -45,6 +47,9 @@
 /* Begin PBXFileReference section */
 		061607901B244EB39A08D653 /* Pods-Cars-CatalogTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cars-CatalogTests.xcconfig"; path = "Pods/Pods-Cars-CatalogTests.xcconfig"; sourceTree = "<group>"; };
 		60487367E07F406480F5DC8F /* Pods-Cars-Catalog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cars-Catalog.xcconfig"; path = "Pods/Pods-Cars-Catalog.xcconfig"; sourceTree = "<group>"; };
+		754F02B719C61162006AB654 /* CCCarFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarFormViewController.h; sourceTree = "<group>"; };
+		754F02B819C61162006AB654 /* CCCarFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarFormViewController.m; sourceTree = "<group>"; };
+		754F02B919C61162006AB654 /* CCCarFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCCarFormViewController.xib; sourceTree = "<group>"; };
 		7569DD0E19BB6D60004C502C /* Cars-Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cars-Catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7569DD1119BB6D60004C502C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7569DD1319BB6D61004C502C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,6 +112,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7532C01319C4EE6300DD0A5E /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				754F02B719C61162006AB654 /* CCCarFormViewController.h */,
+				754F02B819C61162006AB654 /* CCCarFormViewController.m */,
+				754F02B919C61162006AB654 /* CCCarFormViewController.xib */,
+			);
+			name = Car;
+			sourceTree = "<group>";
+		};
 		7569DD0519BB6D60004C502C = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +226,7 @@
 		75F7F56319BCCA350036C25B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				7532C01319C4EE6300DD0A5E /* Car */,
 				75F7F56419BCCA470036C25B /* Cars */,
 			);
 			name = Screens;
@@ -311,6 +327,7 @@
 				7569DD3219BB6D61004C502C /* Images.xcassets in Resources */,
 				7569DD1E19BB6D61004C502C /* InfoPlist.strings in Resources */,
 				75A16FD619C1308C001708A7 /* Settings.plist in Resources */,
+				754F02BB19C61162006AB654 /* CCCarFormViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +417,7 @@
 				7569DD2A19BB6D61004C502C /* Cars_Catalog.xcdatamodeld in Sources */,
 				75A16FDF19C30E08001708A7 /* CCCar.m in Sources */,
 				7569DD2019BB6D61004C502C /* main.m in Sources */,
+				754F02BA19C61162006AB654 /* CCCarFormViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
