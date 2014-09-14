@@ -10,4 +10,7 @@
 
 @interface CCCarFormViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView *formScrollView;
+@property (strong, nonatomic) IBOutlet UIView *formView;
+
 @end

@@ -29,6 +29,9 @@
 - (void)setupAppearance
 {
    self.navigationItem.title = @"Add Car";
+
+    [self.formScrollView addSubview:self.formView];
+    self.formScrollView.contentSize = self.formView.frame.size;
 }
 
 @end
