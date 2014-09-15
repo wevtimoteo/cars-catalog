@@ -11,6 +11,8 @@
 		754F02BA19C61162006AB654 /* CCCarFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F02B819C61162006AB654 /* CCCarFormViewController.m */; };
 		754F02BB19C61162006AB654 /* CCCarFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754F02B919C61162006AB654 /* CCCarFormViewController.xib */; };
 		754F02BE19C62FDF006AB654 /* CCCarRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F02BD19C62FDF006AB654 /* CCCarRequest.m */; };
+		754F02C319C674C0006AB654 /* CCPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F02C119C674C0006AB654 /* CCPickerViewController.m */; };
+		754F02C419C674C0006AB654 /* CCPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754F02C219C674C0006AB654 /* CCPickerViewController.xib */; };
 		7569DD1219BB6D61004C502C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1119BB6D60004C502C /* Foundation.framework */; };
 		7569DD1419BB6D61004C502C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1319BB6D61004C502C /* CoreGraphics.framework */; };
 		7569DD1619BB6D61004C502C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1519BB6D61004C502C /* UIKit.framework */; };
@@ -53,6 +55,9 @@
 		754F02B919C61162006AB654 /* CCCarFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCCarFormViewController.xib; sourceTree = "<group>"; };
 		754F02BC19C62FDF006AB654 /* CCCarRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarRequest.h; sourceTree = "<group>"; };
 		754F02BD19C62FDF006AB654 /* CCCarRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarRequest.m; sourceTree = "<group>"; };
+		754F02C019C674C0006AB654 /* CCPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPickerViewController.h; sourceTree = "<group>"; };
+		754F02C119C674C0006AB654 /* CCPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPickerViewController.m; sourceTree = "<group>"; };
+		754F02C219C674C0006AB654 /* CCPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCPickerViewController.xib; sourceTree = "<group>"; };
 		7569DD0E19BB6D60004C502C /* Cars-Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cars-Catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7569DD1119BB6D60004C502C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7569DD1319BB6D61004C502C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +132,16 @@
 			name = Car;
 			sourceTree = "<group>";
 		};
+		754F02BF19C6748E006AB654 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				754F02C019C674C0006AB654 /* CCPickerViewController.h */,
+				754F02C119C674C0006AB654 /* CCPickerViewController.m */,
+				754F02C219C674C0006AB654 /* CCPickerViewController.xib */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 		7569DD0519BB6D60004C502C = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +184,7 @@
 				7569DD2319BB6D61004C502C /* CCAppDelegate.m */,
 				7569DD3119BB6D61004C502C /* Images.xcassets */,
 				7569DD2819BB6D61004C502C /* Cars_Catalog.xcdatamodeld */,
+				754F02BF19C6748E006AB654 /* Components */,
 				75A16FCE19C127D5001708A7 /* Infrastructure */,
 				75A16FDC19C30DF2001708A7 /* Models */,
 				75F7F56319BCCA350036C25B /* Screens */,
@@ -332,6 +348,7 @@
 				7569DD3219BB6D61004C502C /* Images.xcassets in Resources */,
 				7569DD1E19BB6D61004C502C /* InfoPlist.strings in Resources */,
 				75A16FD619C1308C001708A7 /* Settings.plist in Resources */,
+				754F02C419C674C0006AB654 /* CCPickerViewController.xib in Resources */,
 				754F02BB19C61162006AB654 /* CCCarFormViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +441,7 @@
 				75A16FDF19C30E08001708A7 /* CCCar.m in Sources */,
 				7569DD2019BB6D61004C502C /* main.m in Sources */,
 				754F02BA19C61162006AB654 /* CCCarFormViewController.m in Sources */,
+				754F02C319C674C0006AB654 /* CCPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
