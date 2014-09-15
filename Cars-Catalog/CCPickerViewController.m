@@ -10,29 +10,62 @@
 
 @interface CCPickerViewController ()
 
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
+
 @end
 
 @implementation CCPickerViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithPickerButton:(UIButton *)pickerButton parent:(UIViewController *)parent delegate:(id<CCPickerViewControllerDelegate>)delegate
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
+
     if (self) {
-        // Custom initialization
+        self.pickerButton = pickerButton;
+        self.parent = parent;
+        self.delegate = delegate;
+        [self.delegate setPickerViewController:self];
     }
+
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    self.picker.dataSource = self.delegate;
+    self.picker.delegate = self.delegate;
+
 }
 
-- (void)didReceiveMemoryWarning
+- (void)selectOptionWithTitle:(NSString *)title
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.delegate selectOptionWithTitle:title];
+
+    NSInteger componentCount = [self.delegate numberOfComponentsInPickerView:self.picker];
+
+    for (NSInteger i = 0; i < componentCount; i++) {
+        NSInteger row = [self.delegate selectedRowForComponent:i];
+        [self.picker selectRow:row inComponent:i animated:YES];
+    }
+}
+
+#pragma mark - UI Actions
+
+- (void)pick
+{
+    [self.parent.view endEditing:NO];
+}
+
+- (IBAction)cancel:(id)sender
+{
+    [self.delegate donePickerViewController:self];
+}
+
+- (IBAction)done:(id)sender
+{
+    [self.delegate cancelledPickerViewController:self];
 }
 
 @end
