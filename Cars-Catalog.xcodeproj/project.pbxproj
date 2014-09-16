@@ -33,6 +33,8 @@
 		75A16FD919C136EF001708A7 /* CCCarsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FD819C136EF001708A7 /* CCCarsRequest.m */; };
 		75A16FDF19C30E08001708A7 /* CCCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FDE19C30E08001708A7 /* CCCar.m */; };
 		75A16FE119C31476001708A7 /* CCCarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FE019C31476001708A7 /* CCCarTests.m */; };
+		75C02D1919C7C0F20052FBB5 /* CCYearPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C02D1819C7C0F20052FBB5 /* CCYearPickerViewController.m */; };
+		75C02D1C19C866330052FBB5 /* CCYearPickerViewControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C02D1B19C866330052FBB5 /* CCYearPickerViewControllerDelegate.m */; };
 		75F7F56719BCCA8B0036C25B /* CCCarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */; };
 		ABD82A53BF714E4DB5A441A3 /* libPods-Cars-Catalog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19252721C5C409EA8D73EED /* libPods-Cars-Catalog.a */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,10 @@
 		75A16FDD19C30E08001708A7 /* CCCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCar.h; sourceTree = "<group>"; };
 		75A16FDE19C30E08001708A7 /* CCCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCar.m; sourceTree = "<group>"; };
 		75A16FE019C31476001708A7 /* CCCarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarTests.m; sourceTree = "<group>"; };
+		75C02D1719C7C0F20052FBB5 /* CCYearPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCYearPickerViewController.h; sourceTree = "<group>"; };
+		75C02D1819C7C0F20052FBB5 /* CCYearPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCYearPickerViewController.m; sourceTree = "<group>"; };
+		75C02D1A19C866330052FBB5 /* CCYearPickerViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCYearPickerViewControllerDelegate.h; sourceTree = "<group>"; };
+		75C02D1B19C866330052FBB5 /* CCYearPickerViewControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCYearPickerViewControllerDelegate.m; sourceTree = "<group>"; };
 		75F7F56519BCCA8B0036C25B /* CCCarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarsViewController.h; sourceTree = "<group>"; };
 		75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarsViewController.m; sourceTree = "<group>"; };
 		8EEBD89704C54C7AAB36370B /* libPods-Cars-CatalogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cars-CatalogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +135,10 @@
 				754F02B919C61162006AB654 /* CCCarFormViewController.xib */,
 				754F02BC19C62FDF006AB654 /* CCCarRequest.h */,
 				754F02BD19C62FDF006AB654 /* CCCarRequest.m */,
+				75C02D1719C7C0F20052FBB5 /* CCYearPickerViewController.h */,
+				75C02D1819C7C0F20052FBB5 /* CCYearPickerViewController.m */,
+				75C02D1A19C866330052FBB5 /* CCYearPickerViewControllerDelegate.h */,
+				75C02D1B19C866330052FBB5 /* CCYearPickerViewControllerDelegate.m */,
 			);
 			name = Car;
 			sourceTree = "<group>";
@@ -436,9 +446,11 @@
 				75A16FD419C12F19001708A7 /* CCSettings.m in Sources */,
 				75F7F56719BCCA8B0036C25B /* CCCarsViewController.m in Sources */,
 				754F02BE19C62FDF006AB654 /* CCCarRequest.m in Sources */,
+				75C02D1919C7C0F20052FBB5 /* CCYearPickerViewController.m in Sources */,
 				75A16FD919C136EF001708A7 /* CCCarsRequest.m in Sources */,
 				75A16FD119C127F0001708A7 /* CCHttpClient.m in Sources */,
 				7569DD2419BB6D61004C502C /* CCAppDelegate.m in Sources */,
+				75C02D1C19C866330052FBB5 /* CCYearPickerViewControllerDelegate.m in Sources */,
 				7569DD2A19BB6D61004C502C /* Cars_Catalog.xcdatamodeld in Sources */,
 				75A16FDF19C30E08001708A7 /* CCCar.m in Sources */,
 				7569DD2019BB6D61004C502C /* main.m in Sources */,
