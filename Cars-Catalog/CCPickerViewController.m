@@ -58,12 +58,12 @@
     [self.parent.view endEditing:NO];
 }
 
-- (IBAction)cancel:(id)sender
+- (IBAction)done:(id)sender
 {
     [self.delegate donePickerViewController:self];
 }
 
-- (IBAction)done:(id)sender
+- (IBAction)cancel:(id)sender
 {
     [self.delegate cancelledPickerViewController:self];
 }
