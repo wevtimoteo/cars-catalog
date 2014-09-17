@@ -11,6 +11,8 @@
 @interface CCYearPickerViewControllerDelegate ()
 
 @property (strong, nonatomic) NSArray *yearOptions;
+@property (assign, atomic) NSInteger selectedYearIndex;
+@property (assign, atomic) NSInteger yearIndexTemporarySelection;
 
 @end
 
@@ -34,6 +36,48 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy"];
     return [[formatter stringFromDate:[NSDate date]] intValue];
+}
+
+#pragma mark - PickerViewControllerDelegate protocol
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [self.yearOptions count];
+}
+
+- (void)donePickerViewController:(CCPickerViewController *)pickerViewController
+{
+    self.selectedYearIndex = self.yearIndexTemporarySelection;
+}
+
+- (void)cancelledPickerViewController:(CCPickerViewController *)pickerViewController
+{
+    self.yearIndexTemporarySelection = self.selectedYearIndex;
+}
+
+- (void)selectOptionWithTitle:(NSString *)title
+{
+    NSInteger index = [self.yearOptions indexOfObject:title];
+    
+    if (index != NSNotFound) {
+        self.selectedYearIndex = index;
+        self.yearIndexTemporarySelection = index;
+    }
+}
+
+- (NSString *)selectedOptionTitle
+{
+    return self.yearOptions[self.selectedYearIndex];
+}
+
+- (NSInteger)selectedRowForComponent:(NSInteger)component
+{
+    return self.selectedYearIndex;
 }
 
 @end

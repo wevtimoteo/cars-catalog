@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CCPickerViewController.h"
 
-@interface CCYearPickerViewControllerDelegate : NSObject
+@interface CCYearPickerViewControllerDelegate : NSObject <CCPickerViewControllerDelegate>
+
+@property (strong, atomic) CCPickerViewController *pickerViewController;
 
 - (void)loadYearOptions;
 

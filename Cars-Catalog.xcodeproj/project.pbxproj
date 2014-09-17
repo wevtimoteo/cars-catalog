@@ -52,7 +52,6 @@
 /* Begin PBXFileReference section */
 		061607901B244EB39A08D653 /* Pods-Cars-CatalogTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cars-CatalogTests.xcconfig"; path = "Pods/Pods-Cars-CatalogTests.xcconfig"; sourceTree = "<group>"; };
 		60487367E07F406480F5DC8F /* Pods-Cars-Catalog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cars-Catalog.xcconfig"; path = "Pods/Pods-Cars-Catalog.xcconfig"; sourceTree = "<group>"; };
-		7502D32419C70D1F0093BE48 /* CCPickerViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPickerViewControllerDelegate.h; sourceTree = "<group>"; };
 		754F02B719C61162006AB654 /* CCCarFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarFormViewController.h; sourceTree = "<group>"; };
 		754F02B819C61162006AB654 /* CCCarFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarFormViewController.m; sourceTree = "<group>"; };
 		754F02B919C61162006AB654 /* CCCarFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCCarFormViewController.xib; sourceTree = "<group>"; };
@@ -149,7 +148,6 @@
 				754F02C019C674C0006AB654 /* CCPickerViewController.h */,
 				754F02C119C674C0006AB654 /* CCPickerViewController.m */,
 				754F02C219C674C0006AB654 /* CCPickerViewController.xib */,
-				7502D32419C70D1F0093BE48 /* CCPickerViewControllerDelegate.h */,
 			);
 			name = Components;
 			sourceTree = "<group>";
