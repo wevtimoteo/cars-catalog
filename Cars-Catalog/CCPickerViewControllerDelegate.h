@@ -18,5 +18,7 @@
 - (void)selectOptionWithTitle:(NSString *)title;
 - (NSInteger)selectedRowForComponent:(NSInteger)component;
 - (void)setPickerViewController:(CCPickerViewController *)pickerViewController;
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
 
 @end

@@ -18,12 +18,21 @@
 
 @implementation CCYearPickerViewControllerDelegate
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        [self loadYearOptions];
+    }
+    return self;
+}
+
 - (void)loadYearOptions
 {
     NSMutableArray *yearOptions = [[NSMutableArray alloc] init];
     for (int year = [self currentYear];
          year >= ([self currentYear] - 100); --year) {
-        [yearOptions addObject:[NSNumber numberWithInt:year]];
+        [yearOptions addObject:[NSString stringWithFormat:@"%d", year]];
     }
 
     self.yearOptions = [yearOptions copy];
@@ -39,6 +48,11 @@
 }
 
 #pragma mark - PickerViewControllerDelegate protocol
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return self.yearOptions[row];
+}
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -68,6 +82,11 @@
         self.selectedYearIndex = index;
         self.yearIndexTemporarySelection = index;
     }
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    self.yearIndexTemporarySelection = row;
 }
 
 - (NSString *)selectedOptionTitle
