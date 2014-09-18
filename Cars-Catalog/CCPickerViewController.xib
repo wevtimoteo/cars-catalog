@@ -51,7 +51,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="uHu-tm-bmN" secondAttribute="trailing" id="31l-I5-Aa8"/>
                 <constraint firstItem="Ibm-u6-VqN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Kbu-wg-xFW"/>

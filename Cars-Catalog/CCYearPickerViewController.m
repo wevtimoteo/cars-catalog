@@ -22,9 +22,12 @@
 - (void)pick
 {
     [super pick];
-    
+
+    self.parent.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    self.view.backgroundColor = [UIColor clearColor];
+
     [self.parent presentViewController:self animated:YES completion:nil];
-    
+
     NSString *optionTitle = [self.pickerButton titleForState:UIControlStateNormal];
     [self selectOptionWithTitle:optionTitle];
 }
