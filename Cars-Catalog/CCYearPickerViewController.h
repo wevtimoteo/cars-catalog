@@ -10,4 +10,6 @@
 
 @interface CCYearPickerViewController : CCPickerViewController
 
+@property (strong, nonatomic) NSString *year;
+
 @end

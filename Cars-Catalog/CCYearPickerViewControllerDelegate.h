@@ -14,5 +14,6 @@
 @property (strong, atomic) CCPickerViewController *pickerViewController;
 
 - (void)loadYearOptions;
+- (NSString *)selectedOptionTitle;
 
 @end

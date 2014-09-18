@@ -37,6 +37,7 @@
     [super done:sender];
     [self.pickerButton setTitle:[self.delegate selectedOptionTitle] forState:UIControlStateNormal];
     [self.parent dismissViewControllerAnimated:YES completion:nil];
+    self.year = [self.delegate performSelector:@selector(selectedOptionTitle)];
 }
 
 - (void)cancel:(id)sender
