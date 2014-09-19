@@ -25,6 +25,16 @@
     return self;
 }
 
+- (NSDictionary *)toDictionary
+{
+    return @{
+        @"Nome": self.modelName,
+        @"Fabricante": self.manufacturer,
+        @"Ano": [NSString stringWithFormat:@"%d", self.year],
+        @"Quilometragem": [NSNumber numberWithInteger:self.traveledKilometers]
+    };
+}
+
 #pragma mark - helper methods
 
 - (NSDate *)dateFromString:(NSString *)date
