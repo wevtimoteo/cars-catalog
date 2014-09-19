@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CCCarRequest.h"
 
-@interface CCCarFormViewController : UIViewController
+@interface CCCarFormViewController : UIViewController <CCRequestTarget>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *formScrollView;
 @property (strong, nonatomic) IBOutlet UIView *formView;
 @property (weak, nonatomic) IBOutlet UIButton *yearButton;
+@property (weak, nonatomic) IBOutlet UITextField *modelNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *manufacturerTextField;
+@property (weak, nonatomic) IBOutlet UITextField *kilometersTextField;
+
+@property (strong, nonatomic) CCCarRequest *carRequest;
 
 @end
