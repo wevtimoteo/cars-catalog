@@ -27,9 +27,15 @@ static NSString *const CellIdentifier = @"CarCell";
     [super viewDidLoad];
 
     [self setupRefreshControl];
-    [self handleRefresh];
     [self setupAppearance];
     [self setupNavigationItems];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    [self handleRefresh];
 }
 
 #pragma mark - Refresh control

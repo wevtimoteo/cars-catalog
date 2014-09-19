@@ -9,6 +9,7 @@
 #import "CCCarFormViewController.h"
 #import "CCYearPickerViewController.h"
 #import "CCYearPickerViewControllerDelegate.h"
+#import "CCCar.h"
 
 @interface CCCarFormViewController ()
 
@@ -16,15 +17,17 @@
 @property (strong, atomic) CCYearPickerViewControllerDelegate *yearPickerDelegate;
 
 - (IBAction)pickYear:(__unused id)sender;
+- (IBAction)addCar:(__unused id)sender;
 
 @end
 
 @implementation CCCarFormViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
+        self.carRequest = [CCCarRequest buildWithRequestTarget:self];
     }
     return self;
 }
@@ -34,6 +37,18 @@
     [super viewDidLoad];
     [self setupAppearance];
     [self setupComponents];
+}
+
+#pragma mark - CCRequestTarget protocol
+
+- (void)dataRefreshed:(CCResponseStatus)status
+{
+    if (status == CCResponseSuccess) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        [[UIAlertView alloc] initWithTitle:@"Error to create car" message:@"There was an error while creating car. Try again" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+
+    }
 }
 
 #pragma mark - Setup Appearance
@@ -65,6 +80,25 @@
 
 - (IBAction)pickYear:(__unused id)sender {
     [self.yearPickerViewController pick];
+}
+
+- (IBAction)addCar:(id)sender
+{
+    CCCar *car = [[CCCar alloc] initFromDictionary:[self getFormData]];
+    self.carRequest.car = car;
+    [self.carRequest refresh];
+}
+
+#pragma mark - Helpers
+
+- (NSDictionary *)getFormData
+{
+    return @{
+        @"Nome": self.modelNameTextField.text,
+        @"Fabricante": self.manufacturerTextField.text,
+        @"Quilometragem": self.kilometersTextField.text,
+        @"Ano": [self.yearPickerViewController year]
+    };
 }
 
 @end

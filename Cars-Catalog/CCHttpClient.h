@@ -14,6 +14,10 @@
 - (AFHTTPRequestOperation *)get:(NSString *)url
                           success:(void (^)(AFHTTPRequestOperation *operation, id response))success
                            failure:(void(^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+- (AFHTTPRequestOperation *)post:(NSDictionary *)data
+                              to:(NSString *)url
+                         success:(void (^)(AFHTTPRequestOperation *operation, id response))success
+                           failure:(void(^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 @end
 

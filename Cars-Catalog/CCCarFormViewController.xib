@@ -8,6 +8,9 @@
             <connections>
                 <outlet property="formScrollView" destination="GdB-7P-MJK" id="Mli-vG-UOS"/>
                 <outlet property="formView" destination="5J6-ZN-w9I" id="JvJ-Zq-463"/>
+                <outlet property="kilometersTextField" destination="00e-by-eYl" id="DZU-0R-IoR"/>
+                <outlet property="manufacturerTextField" destination="MBa-nC-djc" id="lQg-st-G8T"/>
+                <outlet property="modelNameTextField" destination="s6b-lz-ihd" id="F24-YZ-aJA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="yearButton" destination="S7V-ML-tiL" id="hzI-L9-VLf"/>
             </connections>
@@ -102,6 +105,9 @@
                     <state key="normal" title="Add">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="addCar:" destination="-1" eventType="touchUpInside" id="wh5-Mg-0Zx"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
