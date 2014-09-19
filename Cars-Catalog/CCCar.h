@@ -19,5 +19,6 @@
 @property (strong, nonatomic) NSDate *updatedAt;
 
 - (id)initFromDictionary:(NSDictionary *)data;
+- (NSDictionary *)toDictionary;
 
 @end

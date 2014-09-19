@@ -25,17 +25,20 @@ PODS:
     - AFNetworking/NSURLSession
   - MBProgressHUD (0.9)
   - OCMock (3.1.1)
+  - TPKeyboardAvoiding (1.2.4)
 
 DEPENDENCIES:
   - AFNetworkActivityLogger (~> 2.0)
   - AFNetworking (~> 2.4)
   - MBProgressHUD (= 0.9)
   - OCMock (~> 3.1)
+  - TPKeyboardAvoiding (~> 1.2)
 
 SPEC CHECKSUMS:
   AFNetworkActivityLogger: d6a2d2755fada3a1fbf1f490ec0dd92224e092a4
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
+  TPKeyboardAvoiding: 925e1e1912597d1a4956697eec3bd9656552153c
 
 COCOAPODS: 0.33.1

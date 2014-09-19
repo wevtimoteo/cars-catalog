@@ -7,6 +7,7 @@
 //
 
 #import "CCCarsViewController.h"
+#import "CCCarFormViewController.h"
 
 @implementation CCCarsViewController
 
@@ -26,8 +27,15 @@ static NSString *const CellIdentifier = @"CarCell";
     [super viewDidLoad];
 
     [self setupRefreshControl];
-    [self handleRefresh];
     [self setupAppearance];
+    [self setupNavigationItems];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    [self handleRefresh];
 }
 
 #pragma mark - Refresh control
@@ -68,6 +76,11 @@ static NSString *const CellIdentifier = @"CarCell";
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+- (void)setupNavigationItems
+{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(goToAddCar)];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -98,6 +111,14 @@ static NSString *const CellIdentifier = @"CarCell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 50.f;
+}
+
+#pragma mark - Navigation
+
+- (void)goToAddCar
+{
+    CCCarFormViewController *carFormViewController = [[CCCarFormViewController alloc] init];
+    [self.navigationController pushViewController:carFormViewController animated:YES];
 }
 
 @end
