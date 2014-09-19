@@ -16,6 +16,13 @@
     return [[self manager] GET:url parameters:nil success:success failure:failure];
 }
 
+- (AFHTTPRequestOperation *)post:(NSDictionary *)data to:(NSString *)url success:(void (^)(AFHTTPRequestOperation *, id))success failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
+{
+    return [[self manager] POST:url parameters:data success:success failure:failure];
+}
+
+#pragma mark - Private
+
 - (AFHTTPRequestOperationManager *)manager
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
