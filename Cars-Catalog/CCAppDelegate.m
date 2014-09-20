@@ -8,6 +8,7 @@
 
 #import <AFNetworkActivityLogger/AFNetworkActivityLogger.h>
 #import "CCAppDelegate.h"
+#import "CCAppNavigationController.h"
 
 @implementation CCAppDelegate
 
@@ -28,7 +29,7 @@
 
 - (void)displayNavigation
 {
-    self.navigationController = [[UINavigationController alloc] init];
+    self.navigationController = [[CCAppNavigationController alloc] init];
     self.carsViewController = [CCCarsViewController buildWithManagedObjectContext:self.managedObjectContext];
     self.window.rootViewController = self.navigationController;
     [self.navigationController pushViewController:self.carsViewController animated:YES];

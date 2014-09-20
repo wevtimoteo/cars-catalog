@@ -37,6 +37,7 @@
 		75C02D1C19C866330052FBB5 /* CCYearPickerViewControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C02D1B19C866330052FBB5 /* CCYearPickerViewControllerDelegate.m */; };
 		75CB2E0619CD08C50010A59F /* CCCarRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CB2E0519CD08C50010A59F /* CCCarRepository.m */; };
 		75CB2E0C19CDB0B10010A59F /* CCCarManaged.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CB2E0B19CDB0B10010A59F /* CCCarManaged.m */; };
+		75CB2E1219CDE8050010A59F /* CCAppNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CB2E1119CDE8050010A59F /* CCAppNavigationController.m */; };
 		75F7F56719BCCA8B0036C25B /* CCCarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */; };
 		ABD82A53BF714E4DB5A441A3 /* libPods-Cars-Catalog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19252721C5C409EA8D73EED /* libPods-Cars-Catalog.a */; };
 /* End PBXBuildFile section */
@@ -99,6 +100,9 @@
 		75CB2E0919CDAD4A0010A59F /* CCEntityNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEntityNames.h; sourceTree = "<group>"; };
 		75CB2E0A19CDB0B10010A59F /* CCCarManaged.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarManaged.h; sourceTree = "<group>"; };
 		75CB2E0B19CDB0B10010A59F /* CCCarManaged.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarManaged.m; sourceTree = "<group>"; };
+		75CB2E0E19CDE0BD0010A59F /* CCColorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCColorConstants.h; sourceTree = "<group>"; };
+		75CB2E1019CDE8050010A59F /* CCAppNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAppNavigationController.h; sourceTree = "<group>"; };
+		75CB2E1119CDE8050010A59F /* CCAppNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAppNavigationController.m; sourceTree = "<group>"; };
 		75F7F56519BCCA8B0036C25B /* CCCarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarsViewController.h; sourceTree = "<group>"; };
 		75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarsViewController.m; sourceTree = "<group>"; };
 		8EEBD89704C54C7AAB36370B /* libPods-Cars-CatalogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cars-CatalogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,11 +278,30 @@
 			name = Persistence;
 			sourceTree = "<group>";
 		};
+		75CB2E0D19CDE0A60010A59F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				75CB2E0E19CDE0BD0010A59F /* CCColorConstants.h */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		75CB2E0F19CDE7A50010A59F /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				75CB2E1019CDE8050010A59F /* CCAppNavigationController.h */,
+				75CB2E1119CDE8050010A59F /* CCAppNavigationController.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
 		75F7F56319BCCA350036C25B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				75CB2E0F19CDE7A50010A59F /* Navigation */,
 				7532C01319C4EE6300DD0A5E /* Car */,
 				75F7F56419BCCA470036C25B /* Cars */,
+				75CB2E0D19CDE0A60010A59F /* Support */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -462,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75A16FD419C12F19001708A7 /* CCSettings.m in Sources */,
+				75CB2E1219CDE8050010A59F /* CCAppNavigationController.m in Sources */,
 				75F7F56719BCCA8B0036C25B /* CCCarsViewController.m in Sources */,
 				754F02BE19C62FDF006AB654 /* CCCarRequest.m in Sources */,
 				75C02D1919C7C0F20052FBB5 /* CCYearPickerViewController.m in Sources */,

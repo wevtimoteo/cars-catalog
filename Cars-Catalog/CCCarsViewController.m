@@ -8,6 +8,7 @@
 
 #import "CCCarsViewController.h"
 #import "CCCarFormViewController.h"
+#import "CCColorConstants.h"
 
 @implementation CCCarsViewController
 
@@ -30,6 +31,7 @@ static NSString *const CellIdentifier = @"CarCell";
     [self setupRefreshControl];
     [self setupAppearance];
     [self setupNavigationItems];
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -81,12 +83,18 @@ static NSString *const CellIdentifier = @"CarCell";
 - (void)setupAppearance
 {
     self.navigationItem.title = @"Cars List";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = ScreenBackgroundColor;
+    [self.navigationController.navigationBar setBarTintColor:NavigationBarBackgroundColor];
+    [self.navigationController.navigationBar setTranslucent:NO];
 }
 
 - (void)setupNavigationItems
 {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(goToAddCar)];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - UITableViewDataSource
@@ -110,6 +118,7 @@ static NSString *const CellIdentifier = @"CarCell";
     }
 
     cell.textLabel.text = [self.carsRequest atIndex:indexPath.row].modelName;
+    cell.backgroundColor = [UIColor clearColor];
 
     return cell;
 }
