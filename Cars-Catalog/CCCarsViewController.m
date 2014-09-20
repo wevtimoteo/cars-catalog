@@ -66,9 +66,14 @@ static NSString *const CellIdentifier = @"CarCell";
 - (void)dataRefreshed:(CCResponseStatus)status
 {
     [self.refreshControl endRefreshing];
-    [self.tableView reloadData];
 
-    [self.carRepository performSelectorInBackground:@selector(saveCars:) withObject:self.carsRequest.cars];
+    if (status == CCResponseSuccess) {
+        [self.carRepository performSelectorInBackground:@selector(saveCars:) withObject:self.carsRequest.cars];
+    } else {
+        self.carsRequest.cars = self.carRepository.retrieveAll;
+    }
+
+    [self.tableView reloadData];
 }
 
 #pragma mark - Setup appearance
