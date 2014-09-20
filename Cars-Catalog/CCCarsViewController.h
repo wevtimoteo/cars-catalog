@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "CCCarsRequest.h"
+#import "CCCarRepository.h"
 
 @interface CCCarsViewController : UITableViewController <CCRequestTarget>
 
++ (CCCarsViewController *)buildWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+
 @property (strong, nonatomic) CCCarsRequest *carsRequest;
+@property (weak, atomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) CCCarRepository *carRepository;
 
 @end

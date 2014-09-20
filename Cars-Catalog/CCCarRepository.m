@@ -8,6 +8,7 @@
 
 #import "CCCarRepository.h"
 #import "CCEntityNames.h"
+#import "CCCar.h"
 
 @implementation CCCarRepository
 
@@ -19,9 +20,26 @@
     return carRepository;
 }
 
-- (void)addCar:(CCCarManaged *)car
+- (void)saveCars:(NSArray *)cars
 {
-    [NSEntityDescription insertNewObjectForEntityForName:CAR_ENTITY inManagedObjectContext:self.managedObjectContext];
+    [self cleanUp];
+
+    for (CCCar *car in cars) {
+        [self addCar:car];
+    }
+}
+
+- (void)addCar:(CCCar *)car
+{
+    CCCarManaged *carManaged = [NSEntityDescription insertNewObjectForEntityForName:CAR_ENTITY inManagedObjectContext:self.managedObjectContext];
+
+    carManaged.objectId = car.objectId;
+    carManaged.modelName = car.modelName;
+    carManaged.manufacturer = car.manufacturer;
+    carManaged.year = [NSNumber numberWithInteger:car.year];
+    carManaged.traveledKilometers = [NSNumber numberWithInteger:car.traveledKilometers];
+    carManaged.createdAt = car.createdAt;
+    carManaged.updatedAt = car.updatedAt;
 
     [self.managedObjectContext save:nil];
 }
@@ -35,7 +53,8 @@
 
 - (void)cleanUp
 {
-    NSArray *cars = [self.managedObjectContext executeFetchRequest:[self fetchRequest] error:nil];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:CAR_ENTITY];
+    NSArray *cars = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
     for (id car in cars) {
         [self.managedObjectContext deleteObject:car];

@@ -29,7 +29,7 @@
 - (void)displayNavigation
 {
     self.navigationController = [[UINavigationController alloc] init];
-    self.carsViewController = [[CCCarsViewController alloc] init];
+    self.carsViewController = [CCCarsViewController buildWithManagedObjectContext:self.managedObjectContext];
     self.window.rootViewController = self.navigationController;
     [self.navigationController pushViewController:self.carsViewController animated:YES];
 }

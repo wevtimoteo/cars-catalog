@@ -14,6 +14,8 @@
 @property (weak, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 + (CCCarRepository *)buildWithContext:(NSManagedObjectContext *)managedObjectContext;
+
+- (void)saveCars:(NSArray *)cars;
 - (void)addCar:(CCCarManaged *)car;
 - (NSArray *)retrieveAll;
 - (void)cleanUp;

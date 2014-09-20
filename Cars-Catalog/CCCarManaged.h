@@ -12,8 +12,8 @@
 
 @property (retain, nonatomic) NSString *objectId;
 @property (retain, nonatomic) NSString *modelName;
-@property (assign, nonatomic) NSInteger year;
-@property (assign, nonatomic) NSInteger traveledKilometers;
+@property (retain, nonatomic) NSNumber *year;
+@property (retain, nonatomic) NSNumber *traveledKilometers;
 @property (retain, nonatomic) NSString *manufacturer;
 @property (retain, nonatomic) NSDate *createdAt;
 @property (retain, nonatomic) NSDate *updatedAt;

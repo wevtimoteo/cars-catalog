@@ -13,13 +13,14 @@
 
 static NSString *const CellIdentifier = @"CarCell";
 
-- (id)init
++ (CCCarsViewController *)buildWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
-    self = [super init];
-    if (self) {
-        self.carsRequest = [CCCarsRequest buildWithRequestTarget:self];
-    }
-    return self;
+    CCCarsViewController *carsViewController = [[CCCarsViewController alloc] init];
+    carsViewController.carsRequest = [CCCarsRequest buildWithRequestTarget:carsViewController];
+    carsViewController.managedObjectContext = managedObjectContext;
+    carsViewController.carRepository = [CCCarRepository buildWithContext:carsViewController.managedObjectContext];
+
+    return carsViewController;
 }
 
 - (void)viewDidLoad
@@ -66,6 +67,8 @@ static NSString *const CellIdentifier = @"CarCell";
 {
     [self.refreshControl endRefreshing];
     [self.tableView reloadData];
+
+    [self.carRepository saveCars:self.carsRequest.cars];
 }
 
 #pragma mark - Setup appearance
