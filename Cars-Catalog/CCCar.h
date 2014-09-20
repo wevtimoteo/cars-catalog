@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface CCCar : NSObject
+@interface CCCar : NSManagedObject
 
 @property (strong, nonatomic) NSString *objectId;
 @property (strong, nonatomic) NSString *modelName;
