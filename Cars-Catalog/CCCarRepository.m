@@ -30,7 +30,7 @@ static NSString *const CarEntityName = @"CCCar";
 - (NSArray *)retrieveAll
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:CarEntityName];
-    
+
     return [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
 }
 
