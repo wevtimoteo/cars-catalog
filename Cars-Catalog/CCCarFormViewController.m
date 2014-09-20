@@ -46,7 +46,7 @@
     if (status == CCResponseSuccess) {
         [self.navigationController popViewControllerAnimated:YES];
     } else {
-        [[[UIAlertView alloc] initWithTitle:@"Error to create car" message:@"There was an error while creating car. Try again" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Unable to add car" message:@"There was an error when adding car. Please check your connection and try again." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
 
     }
 }

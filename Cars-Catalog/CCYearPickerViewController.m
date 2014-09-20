@@ -16,7 +16,11 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    return [super initWithNibName:@"CCPickerViewController" bundle:nibBundleOrNil];
+    self = [super initWithNibName:@"CCPickerViewController" bundle:nibBundleOrNil];
+    if (self) {
+        self.year = @"";
+    }
+    return self;
 }
 
 - (void)pick
