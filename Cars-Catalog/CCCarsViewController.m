@@ -68,7 +68,7 @@ static NSString *const CellIdentifier = @"CarCell";
     [self.refreshControl endRefreshing];
     [self.tableView reloadData];
 
-    [self.carRepository saveCars:self.carsRequest.cars];
+    [self.carRepository performSelectorInBackground:@selector(saveCars:) withObject:self.carsRequest.cars];
 }
 
 #pragma mark - Setup appearance
