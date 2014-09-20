@@ -36,6 +36,7 @@
 		75C02D1919C7C0F20052FBB5 /* CCYearPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C02D1819C7C0F20052FBB5 /* CCYearPickerViewController.m */; };
 		75C02D1C19C866330052FBB5 /* CCYearPickerViewControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C02D1B19C866330052FBB5 /* CCYearPickerViewControllerDelegate.m */; };
 		75CB2E0619CD08C50010A59F /* CCCarRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CB2E0519CD08C50010A59F /* CCCarRepository.m */; };
+		75CB2E0C19CDB0B10010A59F /* CCCarManaged.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CB2E0B19CDB0B10010A59F /* CCCarManaged.m */; };
 		75F7F56719BCCA8B0036C25B /* CCCarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */; };
 		ABD82A53BF714E4DB5A441A3 /* libPods-Cars-Catalog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19252721C5C409EA8D73EED /* libPods-Cars-Catalog.a */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,9 @@
 		75C02D1B19C866330052FBB5 /* CCYearPickerViewControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCYearPickerViewControllerDelegate.m; sourceTree = "<group>"; };
 		75CB2E0419CD08C50010A59F /* CCCarRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarRepository.h; sourceTree = "<group>"; };
 		75CB2E0519CD08C50010A59F /* CCCarRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarRepository.m; sourceTree = "<group>"; };
+		75CB2E0919CDAD4A0010A59F /* CCEntityNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEntityNames.h; sourceTree = "<group>"; };
+		75CB2E0A19CDB0B10010A59F /* CCCarManaged.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarManaged.h; sourceTree = "<group>"; };
+		75CB2E0B19CDB0B10010A59F /* CCCarManaged.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarManaged.m; sourceTree = "<group>"; };
 		75F7F56519BCCA8B0036C25B /* CCCarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarsViewController.h; sourceTree = "<group>"; };
 		75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarsViewController.m; sourceTree = "<group>"; };
 		8EEBD89704C54C7AAB36370B /* libPods-Cars-CatalogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cars-CatalogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +267,9 @@
 			children = (
 				75CB2E0419CD08C50010A59F /* CCCarRepository.h */,
 				75CB2E0519CD08C50010A59F /* CCCarRepository.m */,
+				75CB2E0919CDAD4A0010A59F /* CCEntityNames.h */,
+				75CB2E0A19CDB0B10010A59F /* CCCarManaged.h */,
+				75CB2E0B19CDB0B10010A59F /* CCCarManaged.m */,
 			);
 			name = Persistence;
 			sourceTree = "<group>";
@@ -468,6 +475,7 @@
 				7569DD2019BB6D61004C502C /* main.m in Sources */,
 				754F02BA19C61162006AB654 /* CCCarFormViewController.m in Sources */,
 				754F02C319C674C0006AB654 /* CCPickerViewController.m in Sources */,
+				75CB2E0C19CDB0B10010A59F /* CCCarManaged.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

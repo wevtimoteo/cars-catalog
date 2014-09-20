@@ -7,10 +7,9 @@
 //
 
 #import "CCCarRepository.h"
+#import "CCEntityNames.h"
 
 @implementation CCCarRepository
-
-static NSString *const CarEntityName = @"CCCar";
 
 + (CCCarRepository *)buildWithContext:(NSManagedObjectContext *)managedObjectContext
 {
@@ -20,16 +19,16 @@ static NSString *const CarEntityName = @"CCCar";
     return carRepository;
 }
 
-- (void)addCar:(CCCar *)car
+- (void)addCar:(CCCarManaged *)car
 {
-    [NSEntityDescription insertNewObjectForEntityForName:CarEntityName inManagedObjectContext:self.managedObjectContext];
+    [NSEntityDescription insertNewObjectForEntityForName:CAR_ENTITY inManagedObjectContext:self.managedObjectContext];
 
     [self.managedObjectContext save:nil];
 }
 
 - (NSArray *)retrieveAll
 {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:CarEntityName];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:CAR_ENTITY];
 
     return [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
 }
@@ -54,7 +53,7 @@ static NSString *const CarEntityName = @"CCCar";
 
 - (NSFetchRequest *)fetchRequest
 {
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:CarEntityName];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:CAR_ENTITY];
     [fetchRequest setResultType:NSDictionaryResultType];
 
     return fetchRequest;

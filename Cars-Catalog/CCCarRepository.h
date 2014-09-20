@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCCar.h"
+#import "CCCarManaged.h"
 
 @interface CCCarRepository : NSObject
 
 @property (weak, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 + (CCCarRepository *)buildWithContext:(NSManagedObjectContext *)managedObjectContext;
-- (void)addCar:(CCCar *)car;
+- (void)addCar:(CCCarManaged *)car;
 - (NSArray *)retrieveAll;
 - (void)cleanUp;
 - (NSUInteger)count;
