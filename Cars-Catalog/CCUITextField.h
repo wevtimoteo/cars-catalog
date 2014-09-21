@@ -14,5 +14,6 @@
 @property (assign, atomic) BOOL isInvalid;
 
 - (void)validate;
+- (void)updateState;
 
 @end

@@ -19,9 +19,10 @@
     [self showValidationMessageForTextField:textField];
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
+- (void)textFieldDidEndEditing:(CCUITextField *)textField
 {
     [CCMessage dismissMessage];
+    [self validate:textField];
 }
 
 #pragma mark - Public interface messages
@@ -35,6 +36,7 @@
 {
     textField.isInvalid = [textField.text isEmpty];
     textField.validationMessage = [self requiredValidationMessage];
+    [textField updateState];
 }
 
 #pragma mark - Private
