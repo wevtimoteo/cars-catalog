@@ -24,7 +24,7 @@
 {
     [self cleanUp];
 
-    for (CCCar *car in cars) {
+    for (id car in cars) {
         [self addCar:car];
     }
 }
