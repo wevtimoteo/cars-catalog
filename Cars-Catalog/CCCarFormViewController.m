@@ -7,14 +7,19 @@
 //
 
 #import "CCCarFormViewController.h"
+#import "CCRequiredTextFieldDelegate.h"
 #import "CCYearPickerViewController.h"
 #import "CCYearPickerViewControllerDelegate.h"
 #import "CCCar.h"
+#import "CCMessage.h"
+#import "CCColorConstants.h"
 
 @interface CCCarFormViewController ()
 
 @property (strong, atomic) CCYearPickerViewController *yearPickerViewController;
 @property (strong, atomic) CCYearPickerViewControllerDelegate *yearPickerDelegate;
+
+@property (strong, atomic) NSArray *fieldsToValidate;
 
 - (IBAction)pickYear:(__unused id)sender;
 - (IBAction)addCar:(__unused id)sender;
@@ -22,6 +27,9 @@
 @end
 
 @implementation CCCarFormViewController
+{
+    CCRequiredTextFieldDelegate *requiredTextFieldDelegate;
+}
 
 - (id)init
 {
@@ -35,7 +43,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     [self setupAppearance];
+    [self setupBehavior];
     [self setupComponents];
 }
 
@@ -55,7 +65,10 @@
 
 - (void)setupAppearance
 {
-   self.navigationItem.title = @"Add Car";
+    self.navigationItem.title = @"Add Car";
+
+    [self.formScrollView setBackgroundColor:ScreenBackgroundColor];
+    [self.formView setBackgroundColor:[UIColor clearColor]];
 
     [self.formScrollView addSubview:self.formView];
     self.formScrollView.contentSize = self.formView.frame.size;
@@ -66,6 +79,18 @@
     [self.yearButton setTitle:@"Select..." forState:UIControlStateNormal];
 
     [self setupYearPicker];
+}
+
+#pragma mark - Setup behavior
+
+- (void)setupBehavior
+{
+    requiredTextFieldDelegate = [[CCRequiredTextFieldDelegate alloc] init];
+    self.modelNameTextField.delegate = requiredTextFieldDelegate;
+    self.manufacturerTextField.delegate = requiredTextFieldDelegate;
+    self.kilometersTextField.delegate = requiredTextFieldDelegate;
+
+    self.fieldsToValidate = @[self.modelNameTextField, self.manufacturerTextField, self.kilometersTextField];
 }
 
 #pragma mark - Setup picker
@@ -84,12 +109,16 @@
 
 - (IBAction)addCar:(id)sender
 {
-    CCCar *car = [[CCCar alloc] initFromDictionary:[self getFormData]];
-    self.carRequest.car = car;
-    [self.carRequest refresh];
+    if ([self allFieldsAreValid]) {
+        CCCar *car = [[CCCar alloc] initFromDictionary:[self getFormData]];
+        self.carRequest.car = car;
+        [self.carRequest refresh];
+    } else {
+        [CCMessage showAlert:@"Form validation failed. Please check all red bordered fields."];
+    }
 }
 
-#pragma mark - Helpers
+#pragma mark - Private
 
 - (NSDictionary *)getFormData
 {
@@ -99,6 +128,18 @@
         @"Quilometragem": self.kilometersTextField.text,
         @"Ano": [self.yearPickerViewController year]
     };
+}
+
+- (BOOL)allFieldsAreValid
+{
+    BOOL anyFieldInvalid = NO;
+    
+    for (id field in self.fieldsToValidate) {
+        [field validate];
+        anyFieldInvalid = anyFieldInvalid || [field isInvalid];
+    }
+    
+    return !anyFieldInvalid;
 }
 
 @end

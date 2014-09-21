@@ -5,6 +5,7 @@ target 'Cars-Catalog' do
   pod 'AFNetworkActivityLogger', '~> 2.0'
   pod 'MBProgressHUD', '0.9'
   pod 'TPKeyboardAvoiding', '~> 1.2'
+  pod 'TSMessages', '~> 0.9'
 end
 
 target 'Cars-CatalogTests' do
