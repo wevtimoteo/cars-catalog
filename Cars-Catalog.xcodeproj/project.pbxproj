@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		714AAED927644C1187F3371F /* libPods-Cars-CatalogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEBD89704C54C7AAB36370B /* libPods-Cars-CatalogTests.a */; };
+		751A080D19CF48CA00BD2686 /* CCUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 751A080C19CF48CA00BD2686 /* CCUITextField.m */; };
+		751A081019CF4A0900BD2686 /* CCTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 751A080F19CF4A0900BD2686 /* CCTextFieldDelegate.m */; };
+		751A081319CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 751A081219CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m */; };
 		754F02BA19C61162006AB654 /* CCCarFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F02B819C61162006AB654 /* CCCarFormViewController.m */; };
 		754F02BB19C61162006AB654 /* CCCarFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754F02B919C61162006AB654 /* CCCarFormViewController.xib */; };
 		754F02BE19C62FDF006AB654 /* CCCarRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F02BD19C62FDF006AB654 /* CCCarRequest.m */; };
 		754F02C319C674C0006AB654 /* CCPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F02C119C674C0006AB654 /* CCPickerViewController.m */; };
 		754F02C419C674C0006AB654 /* CCPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754F02C219C674C0006AB654 /* CCPickerViewController.xib */; };
+		7555F4AF19CF584D005CC0B4 /* NSString+CCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7555F4AE19CF584D005CC0B4 /* NSString+CCExtensions.m */; };
 		7569DD1219BB6D61004C502C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1119BB6D60004C502C /* Foundation.framework */; };
 		7569DD1419BB6D61004C502C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1319BB6D61004C502C /* CoreGraphics.framework */; };
 		7569DD1619BB6D61004C502C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1519BB6D61004C502C /* UIKit.framework */; };
@@ -55,6 +59,12 @@
 /* Begin PBXFileReference section */
 		061607901B244EB39A08D653 /* Pods-Cars-CatalogTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cars-CatalogTests.xcconfig"; path = "Pods/Pods-Cars-CatalogTests.xcconfig"; sourceTree = "<group>"; };
 		60487367E07F406480F5DC8F /* Pods-Cars-Catalog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cars-Catalog.xcconfig"; path = "Pods/Pods-Cars-Catalog.xcconfig"; sourceTree = "<group>"; };
+		751A080B19CF48CA00BD2686 /* CCUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUITextField.h; sourceTree = "<group>"; };
+		751A080C19CF48CA00BD2686 /* CCUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCUITextField.m; sourceTree = "<group>"; };
+		751A080E19CF4A0900BD2686 /* CCTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTextFieldDelegate.h; sourceTree = "<group>"; };
+		751A080F19CF4A0900BD2686 /* CCTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTextFieldDelegate.m; sourceTree = "<group>"; };
+		751A081119CF4AF000BD2686 /* CCRequiredTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRequiredTextFieldDelegate.h; sourceTree = "<group>"; };
+		751A081219CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRequiredTextFieldDelegate.m; sourceTree = "<group>"; };
 		754F02B719C61162006AB654 /* CCCarFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarFormViewController.h; sourceTree = "<group>"; };
 		754F02B819C61162006AB654 /* CCCarFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarFormViewController.m; sourceTree = "<group>"; };
 		754F02B919C61162006AB654 /* CCCarFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCCarFormViewController.xib; sourceTree = "<group>"; };
@@ -63,6 +73,8 @@
 		754F02C019C674C0006AB654 /* CCPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPickerViewController.h; sourceTree = "<group>"; };
 		754F02C119C674C0006AB654 /* CCPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPickerViewController.m; sourceTree = "<group>"; };
 		754F02C219C674C0006AB654 /* CCPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCPickerViewController.xib; sourceTree = "<group>"; };
+		7555F4AD19CF584D005CC0B4 /* NSString+CCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CCExtensions.h"; sourceTree = "<group>"; };
+		7555F4AE19CF584D005CC0B4 /* NSString+CCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CCExtensions.m"; sourceTree = "<group>"; };
 		7569DD0E19BB6D60004C502C /* Cars-Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cars-Catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7569DD1119BB6D60004C502C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7569DD1319BB6D61004C502C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -159,6 +171,14 @@
 				754F02C019C674C0006AB654 /* CCPickerViewController.h */,
 				754F02C119C674C0006AB654 /* CCPickerViewController.m */,
 				754F02C219C674C0006AB654 /* CCPickerViewController.xib */,
+				751A080B19CF48CA00BD2686 /* CCUITextField.h */,
+				751A080C19CF48CA00BD2686 /* CCUITextField.m */,
+				751A080E19CF4A0900BD2686 /* CCTextFieldDelegate.h */,
+				751A080F19CF4A0900BD2686 /* CCTextFieldDelegate.m */,
+				751A081119CF4AF000BD2686 /* CCRequiredTextFieldDelegate.h */,
+				751A081219CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m */,
+				7555F4AD19CF584D005CC0B4 /* NSString+CCExtensions.h */,
+				7555F4AE19CF584D005CC0B4 /* NSString+CCExtensions.m */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -488,17 +508,21 @@
 				75CB2E1219CDE8050010A59F /* CCAppNavigationController.m in Sources */,
 				75F7F56719BCCA8B0036C25B /* CCCarsViewController.m in Sources */,
 				754F02BE19C62FDF006AB654 /* CCCarRequest.m in Sources */,
+				751A081319CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m in Sources */,
 				75C02D1919C7C0F20052FBB5 /* CCYearPickerViewController.m in Sources */,
 				75CB2E0619CD08C50010A59F /* CCCarRepository.m in Sources */,
+				7555F4AF19CF584D005CC0B4 /* NSString+CCExtensions.m in Sources */,
 				75A16FD919C136EF001708A7 /* CCCarsRequest.m in Sources */,
 				75A16FD119C127F0001708A7 /* CCHttpClient.m in Sources */,
 				7569DD2419BB6D61004C502C /* CCAppDelegate.m in Sources */,
 				75C02D1C19C866330052FBB5 /* CCYearPickerViewControllerDelegate.m in Sources */,
 				7569DD2A19BB6D61004C502C /* Cars_Catalog.xcdatamodeld in Sources */,
+				751A080D19CF48CA00BD2686 /* CCUITextField.m in Sources */,
 				75A16FDF19C30E08001708A7 /* CCCar.m in Sources */,
 				7569DD2019BB6D61004C502C /* main.m in Sources */,
 				754F02BA19C61162006AB654 /* CCCarFormViewController.m in Sources */,
 				754F02C319C674C0006AB654 /* CCPickerViewController.m in Sources */,
+				751A081019CF4A0900BD2686 /* CCTextFieldDelegate.m in Sources */,
 				75CB2E0C19CDB0B10010A59F /* CCCarManaged.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
