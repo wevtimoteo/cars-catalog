@@ -70,7 +70,7 @@ static NSString *const CellIdentifier = @"CarCell";
     [self.refreshControl endRefreshing];
 
     if (status == CCResponseSuccess) {
-        [self.carRepository performSelectorInBackground:@selector(saveCars:) withObject:self.carsRequest.cars];
+        [self.carRepository performSelector:@selector(saveCars:) withObject:self.carsRequest.cars];
     } else {
         self.carsRequest.cars = self.carRepository.retrieveAll;
     }
