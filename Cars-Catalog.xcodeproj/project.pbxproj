@@ -17,6 +17,7 @@
 		754F02C319C674C0006AB654 /* CCPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F02C119C674C0006AB654 /* CCPickerViewController.m */; };
 		754F02C419C674C0006AB654 /* CCPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754F02C219C674C0006AB654 /* CCPickerViewController.xib */; };
 		7555F4AF19CF584D005CC0B4 /* NSString+CCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7555F4AE19CF584D005CC0B4 /* NSString+CCExtensions.m */; };
+		7555F4B219CF65F5005CC0B4 /* CCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7555F4B119CF65F5005CC0B4 /* CCMessage.m */; };
 		7569DD1219BB6D61004C502C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1119BB6D60004C502C /* Foundation.framework */; };
 		7569DD1419BB6D61004C502C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1319BB6D61004C502C /* CoreGraphics.framework */; };
 		7569DD1619BB6D61004C502C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1519BB6D61004C502C /* UIKit.framework */; };
@@ -75,6 +76,8 @@
 		754F02C219C674C0006AB654 /* CCPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCPickerViewController.xib; sourceTree = "<group>"; };
 		7555F4AD19CF584D005CC0B4 /* NSString+CCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CCExtensions.h"; sourceTree = "<group>"; };
 		7555F4AE19CF584D005CC0B4 /* NSString+CCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CCExtensions.m"; sourceTree = "<group>"; };
+		7555F4B019CF65F5005CC0B4 /* CCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMessage.h; sourceTree = "<group>"; };
+		7555F4B119CF65F5005CC0B4 /* CCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMessage.m; sourceTree = "<group>"; };
 		7569DD0E19BB6D60004C502C /* Cars-Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cars-Catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7569DD1119BB6D60004C502C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7569DD1319BB6D61004C502C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -302,6 +305,8 @@
 			isa = PBXGroup;
 			children = (
 				75CB2E0E19CDE0BD0010A59F /* CCColorConstants.h */,
+				7555F4B019CF65F5005CC0B4 /* CCMessage.h */,
+				7555F4B119CF65F5005CC0B4 /* CCMessage.m */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				75C02D1919C7C0F20052FBB5 /* CCYearPickerViewController.m in Sources */,
 				75CB2E0619CD08C50010A59F /* CCCarRepository.m in Sources */,
 				7555F4AF19CF584D005CC0B4 /* NSString+CCExtensions.m in Sources */,
+				7555F4B219CF65F5005CC0B4 /* CCMessage.m in Sources */,
 				75A16FD919C136EF001708A7 /* CCCarsRequest.m in Sources */,
 				75A16FD119C127F0001708A7 /* CCHttpClient.m in Sources */,
 				7569DD2419BB6D61004C502C /* CCAppDelegate.m in Sources */,
