@@ -11,20 +11,26 @@
 
 @implementation CCMessage
 
-- (void)showAlert:(NSString *)message
++ (void)showAlert:(NSString *)message
 {
     [self showMessage:message type:TSMessageNotificationTypeWarning];
 }
 
-- (void)showError:(NSString *)message
++ (void)showError:(NSString *)message
 {
     [self showMessage:message type:TSMessageNotificationTypeError];
 }
 
++ (void)dismissMessage
+{
+    [TSMessage dismissActiveNotification];
+}
+
 #pragma mark - Private
 
-- (void)showMessage:(NSString *)message type:(TSMessageNotificationType)type
++ (void)showMessage:(NSString *)message type:(TSMessageNotificationType)type
 {
+    [self dismissMessage];
     [TSMessage showNotificationWithTitle:message subtitle:nil type:type];
 }
 

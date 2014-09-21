@@ -10,7 +10,8 @@
 
 @interface CCMessage : NSObject
 
-- (void)showAlert:(NSString *)message;
-- (void)showError:(NSString *)message;
++ (void)showAlert:(NSString *)message;
++ (void)showError:(NSString *)message;
++ (void)dismissMessage;
 
 @end

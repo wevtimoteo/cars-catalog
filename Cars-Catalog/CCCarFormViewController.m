@@ -109,8 +109,7 @@
         self.carRequest.car = car;
         [self.carRequest refresh];
     } else {
-        CCMessage *message = [[CCMessage alloc] init];
-        [message showAlert:@"Form validation failed. Please check all red bordered fields."];
+        [CCMessage showAlert:@"Form validation failed. Please check all red bordered fields."];
     }
 }
 

@@ -9,7 +9,7 @@
 #import "CCTextFieldDelegate.h"
 #import "CCUITextField.h"
 
-@interface CCRequiredTextFieldDelegate : CCTextFieldDelegate
+@interface CCRequiredTextFieldDelegate : CCTextFieldDelegate <UITextFieldDelegate>
 
 - (NSString *)requiredValidationMessage;
 - (void)validate:(CCUITextField *)textField;

@@ -7,9 +7,22 @@
 //
 
 #import "CCRequiredTextFieldDelegate.h"
+#import "CCMessage.h"
 #import "NSString+CCExtensions.h"
 
 @implementation CCRequiredTextFieldDelegate
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(CCUITextField *)textField
+{
+    [self showValidationMessageForTextField:textField];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [CCMessage dismissMessage];
+}
 
 #pragma mark - Public interface messages
 
@@ -22,6 +35,15 @@
 {
     textField.isInvalid = [textField.text isEmpty];
     textField.validationMessage = [self requiredValidationMessage];
+}
+
+#pragma mark - Private
+
+- (void)showValidationMessageForTextField:(CCUITextField *)textField
+{
+    if (textField.isInvalid) {
+        [CCMessage showAlert:textField.validationMessage];
+    }
 }
 
 @end
