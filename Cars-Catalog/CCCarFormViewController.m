@@ -12,6 +12,7 @@
 #import "CCYearPickerViewControllerDelegate.h"
 #import "CCCar.h"
 #import "CCMessage.h"
+#import "CCColorConstants.h"
 
 @interface CCCarFormViewController ()
 
@@ -42,6 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     [self setupAppearance];
     [self setupBehavior];
     [self setupComponents];
@@ -63,7 +65,10 @@
 
 - (void)setupAppearance
 {
-   self.navigationItem.title = @"Add Car";
+    self.navigationItem.title = @"Add Car";
+
+    [self.formScrollView setBackgroundColor:ScreenBackgroundColor];
+    [self.formView setBackgroundColor:[UIColor clearColor]];
 
     [self.formScrollView addSubview:self.formView];
     self.formScrollView.contentSize = self.formView.frame.size;
