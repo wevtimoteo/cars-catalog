@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "CCPickerViewController.h"
+#import "CCRequiredPickerButtonDelegate.h"
 
-@interface CCYearPickerViewControllerDelegate : NSObject <CCPickerViewControllerDelegate>
-
-@property (strong, atomic) CCPickerViewController *pickerViewController;
+@interface CCYearPickerViewControllerDelegate : CCRequiredPickerButtonDelegate <CCPickerViewControllerDelegate>
 
 - (void)loadYearOptions;
 - (NSString *)selectedOptionTitle;

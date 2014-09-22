@@ -8,6 +8,7 @@
 
 #import "CCCarFormViewController.h"
 #import "CCRequiredTextFieldDelegate.h"
+#import "CCRequiredPickerButtonDelegate.h"
 #import "CCYearPickerViewController.h"
 #import "CCYearPickerViewControllerDelegate.h"
 #import "CCCar.h"
@@ -45,8 +46,8 @@
     [super viewDidLoad];
 
     [self setupAppearance];
-    [self setupBehavior];
     [self setupComponents];
+    [self setupBehavior];
 }
 
 #pragma mark - CCRequestTarget protocol
@@ -70,6 +71,9 @@
     [self.formScrollView setBackgroundColor:ScreenBackgroundColor];
     [self.formView setBackgroundColor:[UIColor clearColor]];
 
+    self.addCarButton.backgroundColor = ButtonBackgroundColor;
+    self.addCarButton.layer.borderColor = [ButtonBorderColor CGColor];
+
     [self.formScrollView addSubview:self.formView];
     self.formScrollView.contentSize = self.formView.frame.size;
 }
@@ -86,11 +90,13 @@
 - (void)setupBehavior
 {
     requiredTextFieldDelegate = [[CCRequiredTextFieldDelegate alloc] init];
+
     self.modelNameTextField.delegate = requiredTextFieldDelegate;
     self.manufacturerTextField.delegate = requiredTextFieldDelegate;
     self.kilometersTextField.delegate = requiredTextFieldDelegate;
+    self.yearButton.delegate = self.yearPickerDelegate;
 
-    self.fieldsToValidate = @[self.modelNameTextField, self.manufacturerTextField, self.kilometersTextField];
+    self.fieldsToValidate = @[self.modelNameTextField, self.manufacturerTextField, self.yearButton, self.kilometersTextField];
 }
 
 #pragma mark - Setup picker
@@ -99,6 +105,7 @@
 {
     self.yearPickerDelegate = [[CCYearPickerViewControllerDelegate alloc] init];
     self.yearPickerViewController = [[CCYearPickerViewController alloc] initWithPickerButton:self.yearButton parent:self delegate:self.yearPickerDelegate];
+    self.yearPickerDelegate.pickerViewController = self.yearPickerViewController;
 }
 
 #pragma mark - UI Actions

@@ -8,14 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "CCPickerViewControllerDelegate.h"
+#import "CCUIPickerButton.h"
 
 @interface CCPickerViewController : UIViewController
 
-@property (weak, atomic) UIButton *pickerButton;
+@property (weak, atomic) CCUIPickerButton *pickerButton;
 @property (weak, atomic) id<CCPickerViewControllerDelegate> delegate;
 @property (weak, atomic) UIViewController *parent;
 
-- (id)initWithPickerButton:(UIButton *)pickerButton parent:(UIViewController *)parent delegate:(id<CCPickerViewControllerDelegate>)delegate;
+- (id)initWithPickerButton:(CCUIPickerButton *)pickerButton parent:(UIViewController *)parent delegate:(id<CCPickerViewControllerDelegate>)delegate;
 - (void)selectOptionWithTitle:(NSString *)title;
 - (void)pick;
 

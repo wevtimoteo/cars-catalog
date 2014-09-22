@@ -8,15 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "CCCarRequest.h"
+#import "CCUIPickerButton.h"
 
 @interface CCCarFormViewController : UIViewController <CCRequestTarget>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *formScrollView;
 @property (strong, nonatomic) IBOutlet UIView *formView;
-@property (weak, nonatomic) IBOutlet UIButton *yearButton;
+@property (weak, nonatomic) IBOutlet CCUIPickerButton *yearButton;
 @property (weak, nonatomic) IBOutlet UITextField *modelNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *manufacturerTextField;
 @property (weak, nonatomic) IBOutlet UITextField *kilometersTextField;
+@property (weak, nonatomic) IBOutlet UIButton *addCarButton;
 
 @property (strong, nonatomic) CCCarRequest *carRequest;
 
