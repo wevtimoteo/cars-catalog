@@ -67,6 +67,7 @@
 - (void)donePickerViewController:(CCPickerViewController *)pickerViewController
 {
     self.selectedYearIndex = self.yearIndexTemporarySelection;
+    self.valid = YES;
 }
 
 - (void)cancelledPickerViewController:(CCPickerViewController *)pickerViewController

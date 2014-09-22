@@ -14,5 +14,8 @@
 #define NavigationBarBackgroundColor [UIColor colorWithRed:32/255.0f green:41/255.0f blue:45/255.0f alpha:1.0f]
 #define TextFieldBorderColor [UIColor colorWithRed:94/255.0f green:92/255.0f blue:93/255.0f alpha:1.0f]
 #define InvalidTextFieldBorderColor [UIColor colorWithRed:218/255.0f green:42/255.0f blue:58/255.0f alpha:1.0f]
+#define ButtonBackgroundColor [UIColor colorWithRed:220/255.0f green:240/255.0f blue:240/255.0f alpha:1.0f]
+#define ButtonBorderColor [UIColor colorWithRed:94/255.0f green:92/255.0f blue:93/255.0f alpha:1.0f]
+#define InvalidButtonBorderColor [UIColor colorWithRed:218/255.0f green:42/255.0f blue:58/255.0f alpha:1.0f]
 
 #endif

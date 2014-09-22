@@ -11,6 +11,8 @@
 		751A080D19CF48CA00BD2686 /* CCUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 751A080C19CF48CA00BD2686 /* CCUITextField.m */; };
 		751A081019CF4A0900BD2686 /* CCTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 751A080F19CF4A0900BD2686 /* CCTextFieldDelegate.m */; };
 		751A081319CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 751A081219CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m */; };
+		751D46D719CFAFFF006AAF71 /* CCUIPickerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 751D46D619CFAFFF006AAF71 /* CCUIPickerButton.m */; };
+		751D46DA19CFB2AB006AAF71 /* CCRequiredPickerButtonDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 751D46D919CFB2AB006AAF71 /* CCRequiredPickerButtonDelegate.m */; };
 		754F02BA19C61162006AB654 /* CCCarFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F02B819C61162006AB654 /* CCCarFormViewController.m */; };
 		754F02BB19C61162006AB654 /* CCCarFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754F02B919C61162006AB654 /* CCCarFormViewController.xib */; };
 		754F02BE19C62FDF006AB654 /* CCCarRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F02BD19C62FDF006AB654 /* CCCarRequest.m */; };
@@ -66,6 +68,10 @@
 		751A080F19CF4A0900BD2686 /* CCTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTextFieldDelegate.m; sourceTree = "<group>"; };
 		751A081119CF4AF000BD2686 /* CCRequiredTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRequiredTextFieldDelegate.h; sourceTree = "<group>"; };
 		751A081219CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRequiredTextFieldDelegate.m; sourceTree = "<group>"; };
+		751D46D519CFAFFF006AAF71 /* CCUIPickerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUIPickerButton.h; sourceTree = "<group>"; };
+		751D46D619CFAFFF006AAF71 /* CCUIPickerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCUIPickerButton.m; sourceTree = "<group>"; };
+		751D46D819CFB2AB006AAF71 /* CCRequiredPickerButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRequiredPickerButtonDelegate.h; sourceTree = "<group>"; };
+		751D46D919CFB2AB006AAF71 /* CCRequiredPickerButtonDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRequiredPickerButtonDelegate.m; sourceTree = "<group>"; };
 		754F02B719C61162006AB654 /* CCCarFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarFormViewController.h; sourceTree = "<group>"; };
 		754F02B819C61162006AB654 /* CCCarFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarFormViewController.m; sourceTree = "<group>"; };
 		754F02B919C61162006AB654 /* CCCarFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCCarFormViewController.xib; sourceTree = "<group>"; };
@@ -174,12 +180,16 @@
 				754F02C019C674C0006AB654 /* CCPickerViewController.h */,
 				754F02C119C674C0006AB654 /* CCPickerViewController.m */,
 				754F02C219C674C0006AB654 /* CCPickerViewController.xib */,
-				751A080B19CF48CA00BD2686 /* CCUITextField.h */,
-				751A080C19CF48CA00BD2686 /* CCUITextField.m */,
-				751A080E19CF4A0900BD2686 /* CCTextFieldDelegate.h */,
-				751A080F19CF4A0900BD2686 /* CCTextFieldDelegate.m */,
+				751D46D819CFB2AB006AAF71 /* CCRequiredPickerButtonDelegate.h */,
+				751D46D919CFB2AB006AAF71 /* CCRequiredPickerButtonDelegate.m */,
 				751A081119CF4AF000BD2686 /* CCRequiredTextFieldDelegate.h */,
 				751A081219CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m */,
+				751A080E19CF4A0900BD2686 /* CCTextFieldDelegate.h */,
+				751A080F19CF4A0900BD2686 /* CCTextFieldDelegate.m */,
+				751D46D519CFAFFF006AAF71 /* CCUIPickerButton.h */,
+				751D46D619CFAFFF006AAF71 /* CCUIPickerButton.m */,
+				751A080B19CF48CA00BD2686 /* CCUITextField.h */,
+				751A080C19CF48CA00BD2686 /* CCUITextField.m */,
 				7555F4AD19CF584D005CC0B4 /* NSString+CCExtensions.h */,
 				7555F4AE19CF584D005CC0B4 /* NSString+CCExtensions.m */,
 			);
@@ -516,6 +526,7 @@
 				751A081319CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m in Sources */,
 				75C02D1919C7C0F20052FBB5 /* CCYearPickerViewController.m in Sources */,
 				75CB2E0619CD08C50010A59F /* CCCarRepository.m in Sources */,
+				751D46DA19CFB2AB006AAF71 /* CCRequiredPickerButtonDelegate.m in Sources */,
 				7555F4AF19CF584D005CC0B4 /* NSString+CCExtensions.m in Sources */,
 				7555F4B219CF65F5005CC0B4 /* CCMessage.m in Sources */,
 				75A16FD919C136EF001708A7 /* CCCarsRequest.m in Sources */,
@@ -524,6 +535,7 @@
 				75C02D1C19C866330052FBB5 /* CCYearPickerViewControllerDelegate.m in Sources */,
 				7569DD2A19BB6D61004C502C /* Cars_Catalog.xcdatamodeld in Sources */,
 				751A080D19CF48CA00BD2686 /* CCUITextField.m in Sources */,
+				751D46D719CFAFFF006AAF71 /* CCUIPickerButton.m in Sources */,
 				75A16FDF19C30E08001708A7 /* CCCar.m in Sources */,
 				7569DD2019BB6D61004C502C /* main.m in Sources */,
 				754F02BA19C61162006AB654 /* CCCarFormViewController.m in Sources */,

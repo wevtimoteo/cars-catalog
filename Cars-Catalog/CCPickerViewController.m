@@ -7,6 +7,7 @@
 //
 
 #import "CCPickerViewController.h"
+#import "CCMessage.h"
 
 @interface CCPickerViewController ()
 
@@ -16,7 +17,7 @@
 
 @implementation CCPickerViewController
 
-- (id)initWithPickerButton:(UIButton *)pickerButton parent:(UIViewController *)parent delegate:(id<CCPickerViewControllerDelegate>)delegate
+- (id)initWithPickerButton:(CCUIPickerButton *)pickerButton parent:(UIViewController *)parent delegate:(id<CCPickerViewControllerDelegate>)delegate
 {
     self = [super init];
 
@@ -56,10 +57,16 @@
 - (void)pick
 {
     [self.parent.view endEditing:NO];
+
+    if (self.pickerButton.isInvalid) {
+        [CCMessage showAlert:self.pickerButton.validationMessage];
+    }
 }
 
 - (IBAction)done:(id)sender
 {
+    self.pickerButton.isInvalid = NO;
+    [self.pickerButton updateState];
     [self.delegate donePickerViewController:self];
 }
 
