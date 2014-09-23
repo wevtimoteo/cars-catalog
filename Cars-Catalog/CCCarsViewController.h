@@ -13,6 +13,7 @@
 @interface CCCarsViewController : UITableViewController <CCRequestTarget>
 
 + (CCCarsViewController *)buildWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+- (void)goToAddCar;
 
 @property (strong, nonatomic) CCCarsRequest *carsRequest;
 @property (weak, atomic) NSManagedObjectContext *managedObjectContext;
