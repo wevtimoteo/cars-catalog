@@ -10,6 +10,7 @@
 #import <OCMock/OCMock.h>
 #import "CCCarsViewController.h"
 #import "CCCarsRequest.h"
+#import "CCCarFormViewController.h"
 
 @interface CCCarsViewControllerTests : XCTestCase
 
@@ -25,7 +26,7 @@
 {
     [super setUp];
     carsRequest = OCMClassMock([CCCarsRequest class]);
-    
+
     carsScreen = [[CCCarsViewController alloc] init];
     [carsScreen view];
     carsScreen.carsRequest = carsRequest;
@@ -52,6 +53,30 @@
     
     [carsScreen dataRefreshed:CCResponseSuccess];
     [tableView verify];
+}
+
+- (void)testShowsResultsReturnedByTheAPI
+{
+    NSInteger results = 30;
+    [[[carsRequest stub] andReturnValue:OCMOCK_VALUE(results)] count];
+    
+    XCTAssertEqual(results, [carsScreen tableView:nil numberOfRowsInSection:0]);
+}
+
+- (void)testPushesToAddCarScreenOnClick
+{
+    id navigationController = [OCMockObject niceMockForClass:[UINavigationController class]];
+    [[navigationController expect] pushViewController:[OCMArg checkWithBlock:^BOOL(CCCarFormViewController *viewController) {
+        return YES;
+    }] animated:YES];
+    
+    carsScreen = [OCMockObject partialMockForObject:carsScreen];
+    [[[(id)carsScreen stub] andReturn:navigationController] navigationController];
+
+    [carsScreen performSelector:@selector(goToAddCar) withObject:nil];
+
+    [navigationController verify];
+    [(id)carsScreen stopMocking];
 }
 
 @end
