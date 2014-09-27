@@ -35,6 +35,7 @@
 		7569DD3B19BB6D61004C502C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1519BB6D61004C502C /* UIKit.framework */; };
 		7569DD3C19BB6D61004C502C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DD1719BB6D61004C502C /* CoreData.framework */; };
 		7569DD4419BB6D61004C502C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7569DD4219BB6D61004C502C /* InfoPlist.strings */; };
+		7576FE4019D72E060079DFB9 /* CCCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7576FE3F19D72E060079DFB9 /* CCCarCell.swift */; };
 		75A16FD119C127F0001708A7 /* CCHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FD019C127F0001708A7 /* CCHttpClient.m */; };
 		75A16FD419C12F19001708A7 /* CCSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A16FD319C12F19001708A7 /* CCSettings.m */; };
 		75A16FD619C1308C001708A7 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A16FD519C1308C001708A7 /* Settings.plist */; };
@@ -103,6 +104,8 @@
 		7569DD3819BB6D61004C502C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7569DD4119BB6D61004C502C /* Cars-CatalogTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cars-CatalogTests-Info.plist"; sourceTree = "<group>"; };
 		7569DD4319BB6D61004C502C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7576FE3E19D72E050079DFB9 /* Cars-Catalog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cars-Catalog-Bridging-Header.h"; sourceTree = "<group>"; };
+		7576FE3F19D72E060079DFB9 /* CCCarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCarCell.swift; sourceTree = "<group>"; };
 		75A16FCF19C127F0001708A7 /* CCHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHttpClient.h; sourceTree = "<group>"; };
 		75A16FD019C127F0001708A7 /* CCHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHttpClient.m; sourceTree = "<group>"; };
 		75A16FD219C12F19001708A7 /* CCSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSettings.h; sourceTree = "<group>"; };
@@ -236,6 +239,7 @@
 		7569DD1919BB6D61004C502C /* Cars-Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				7576FE3E19D72E050079DFB9 /* Cars-Catalog-Bridging-Header.h */,
 				7569DD2219BB6D61004C502C /* CCAppDelegate.h */,
 				7569DD2319BB6D61004C502C /* CCAppDelegate.m */,
 				7569DD3119BB6D61004C502C /* Images.xcassets */,
@@ -351,6 +355,7 @@
 				75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */,
 				75A16FD719C136EF001708A7 /* CCCarsRequest.h */,
 				75A16FD819C136EF001708A7 /* CCCarsRequest.m */,
+				7576FE3F19D72E060079DFB9 /* CCCarCell.swift */,
 			);
 			name = Cars;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				754F02BE19C62FDF006AB654 /* CCCarRequest.m in Sources */,
 				751A081319CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m in Sources */,
 				75C02D1919C7C0F20052FBB5 /* CCYearPickerViewController.m in Sources */,
+				7576FE4019D72E060079DFB9 /* CCCarCell.swift in Sources */,
 				75CB2E0619CD08C50010A59F /* CCCarRepository.m in Sources */,
 				751D46DA19CFB2AB006AAF71 /* CCRequiredPickerButtonDelegate.m in Sources */,
 				7555F4AF19CF584D005CC0B4 /* NSString+CCExtensions.m in Sources */,
@@ -663,10 +669,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cars-Catalog/Cars-Catalog-Prefix.pch";
 				INFOPLIST_FILE = "Cars-Catalog/Cars-Catalog-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cars-Catalog/Cars-Catalog-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -677,10 +688,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cars-Catalog/Cars-Catalog-Prefix.pch";
 				INFOPLIST_FILE = "Cars-Catalog/Cars-Catalog-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cars-Catalog/Cars-Catalog-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -9,6 +9,7 @@
 #import "CCCarsViewController.h"
 #import "CCCarFormViewController.h"
 #import "CCColorConstants.h"
+#import "Cars_Catalog-Swift.h"
 
 @implementation CCCarsViewController
 
@@ -111,10 +112,10 @@ static NSString *const CellIdentifier = @"CarCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CCCarCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[CCCarCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 
     cell.textLabel.text = [self.carsRequest atIndex:indexPath.row].modelName;
