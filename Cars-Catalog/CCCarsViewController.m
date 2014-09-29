@@ -89,6 +89,7 @@ static NSString *const CellIdentifier = @"CarCell";
     [self.navigationController.navigationBar setBarTintColor:NavigationBarBackgroundColor];
     [self.navigationController.navigationBar setTranslucent:NO];
     [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    self.clearsSelectionOnViewWillAppear = YES;
 }
 
 - (void)setupNavigationItems

@@ -10,6 +10,13 @@
 
 @implementation CCCarTableViewCell
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+
+    [self setupAppearance];
+}
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -23,8 +30,8 @@
 {
     self.modelNameLabel.text = car.modelName;
     self.manufacturerLabel.text = car.manufacturer;
-    self.yearLabel.text = [NSString stringWithFormat:@"%@", car.year];
-    self.traveledKilometersLabel.text = [NSString stringWithFormat:@"%@ km", car.traveledKilometers];
+    self.yearLabel.text = [NSString stringWithFormat:@"%li", (long)car.year];
+    self.traveledKilometersLabel.text = [NSString stringWithFormat:@"%li km", (long)car.traveledKilometers];
     self.createdAtLabel.text = [NSString stringWithFormat:@"%@", car.createdAt];
 }
 
