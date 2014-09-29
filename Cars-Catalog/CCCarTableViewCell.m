@@ -32,7 +32,10 @@
     self.manufacturerLabel.text = car.manufacturer;
     self.yearLabel.text = [NSString stringWithFormat:@"%li", (long)car.year];
     self.traveledKilometersLabel.text = [NSString stringWithFormat:@"%li km", (long)car.traveledKilometers];
-    self.createdAtLabel.text = [NSString stringWithFormat:@"%@", car.createdAt];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy"];
+    NSString *createdAt = [formatter stringFromDate:car.createdAt];
+    self.createdAtLabel.text = [NSString stringWithFormat:@"%@", createdAt];
 }
 
 #pragma mark - Setup appearance
