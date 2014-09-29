@@ -8,6 +8,7 @@
 
 #import "CCCarsViewController.h"
 #import "CCCarFormViewController.h"
+#import "CCCarTableViewCell.h"
 #import "CCColorConstants.h"
 
 @implementation CCCarsViewController
@@ -32,6 +33,7 @@ static NSString *const CellIdentifier = @"CarCell";
     [self setupAppearance];
     [self setupNavigationItems];
     [self setNeedsStatusBarAppearanceUpdate];
+    [self setupCell];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -86,6 +88,7 @@ static NSString *const CellIdentifier = @"CarCell";
     self.view.backgroundColor = ScreenBackgroundColor;
     [self.navigationController.navigationBar setBarTintColor:NavigationBarBackgroundColor];
     [self.navigationController.navigationBar setTranslucent:NO];
+    [self.tableView setSeparatorInset:UIEdgeInsetsZero];
 }
 
 - (void)setupNavigationItems
@@ -95,6 +98,11 @@ static NSString *const CellIdentifier = @"CarCell";
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+- (void)setupCell
+{
+    [self.tableView registerNib:[UINib nibWithNibName:@"CCCarTableViewCell" bundle:nil] forCellReuseIdentifier:CellIdentifier];
 }
 
 #pragma mark - UITableViewDataSource
@@ -111,14 +119,13 @@ static NSString *const CellIdentifier = @"CarCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CCCarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[CCCarTableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 
-    cell.textLabel.text = [self.carsRequest atIndex:indexPath.row].modelName;
-    cell.backgroundColor = [UIColor clearColor];
+    [cell configureCar:[self.carsRequest atIndex:indexPath.row]];
 
     return cell;
 }
@@ -127,7 +134,7 @@ static NSString *const CellIdentifier = @"CarCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50.f;
+    return 100.0f;
 }
 
 #pragma mark - Navigation
