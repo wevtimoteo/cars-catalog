@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		714AAED927644C1187F3371F /* libPods-Cars-CatalogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEBD89704C54C7AAB36370B /* libPods-Cars-CatalogTests.a */; };
+		75089EB919D8D0EC0050A899 /* CCCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75089EB719D8D0EC0050A899 /* CCCarTableViewCell.m */; };
+		75089EBA19D8D0EC0050A899 /* CCCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75089EB819D8D0EC0050A899 /* CCCarTableViewCell.xib */; };
 		751A080D19CF48CA00BD2686 /* CCUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 751A080C19CF48CA00BD2686 /* CCUITextField.m */; };
 		751A081019CF4A0900BD2686 /* CCTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 751A080F19CF4A0900BD2686 /* CCTextFieldDelegate.m */; };
 		751A081319CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 751A081219CF4AF000BD2686 /* CCRequiredTextFieldDelegate.m */; };
@@ -63,6 +65,9 @@
 /* Begin PBXFileReference section */
 		061607901B244EB39A08D653 /* Pods-Cars-CatalogTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cars-CatalogTests.xcconfig"; path = "Pods/Pods-Cars-CatalogTests.xcconfig"; sourceTree = "<group>"; };
 		60487367E07F406480F5DC8F /* Pods-Cars-Catalog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cars-Catalog.xcconfig"; path = "Pods/Pods-Cars-Catalog.xcconfig"; sourceTree = "<group>"; };
+		75089EB619D8D0EC0050A899 /* CCCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarTableViewCell.h; sourceTree = "<group>"; };
+		75089EB719D8D0EC0050A899 /* CCCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarTableViewCell.m; sourceTree = "<group>"; };
+		75089EB819D8D0EC0050A899 /* CCCarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCCarTableViewCell.xib; sourceTree = "<group>"; };
 		751A080B19CF48CA00BD2686 /* CCUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUITextField.h; sourceTree = "<group>"; };
 		751A080C19CF48CA00BD2686 /* CCUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCUITextField.m; sourceTree = "<group>"; };
 		751A080E19CF4A0900BD2686 /* CCTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTextFieldDelegate.h; sourceTree = "<group>"; };
@@ -351,6 +356,9 @@
 				75F7F56619BCCA8B0036C25B /* CCCarsViewController.m */,
 				75A16FD719C136EF001708A7 /* CCCarsRequest.h */,
 				75A16FD819C136EF001708A7 /* CCCarsRequest.m */,
+				75089EB619D8D0EC0050A899 /* CCCarTableViewCell.h */,
+				75089EB719D8D0EC0050A899 /* CCCarTableViewCell.m */,
+				75089EB819D8D0EC0050A899 /* CCCarTableViewCell.xib */,
 			);
 			name = Cars;
 			sourceTree = "<group>";
@@ -440,6 +448,7 @@
 				7569DD1E19BB6D61004C502C /* InfoPlist.strings in Resources */,
 				75A16FD619C1308C001708A7 /* Settings.plist in Resources */,
 				754F02C419C674C0006AB654 /* CCPickerViewController.xib in Resources */,
+				75089EBA19D8D0EC0050A899 /* CCCarTableViewCell.xib in Resources */,
 				754F02BB19C61162006AB654 /* CCCarFormViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,6 +553,7 @@
 				754F02BA19C61162006AB654 /* CCCarFormViewController.m in Sources */,
 				754F02C319C674C0006AB654 /* CCPickerViewController.m in Sources */,
 				751A081019CF4A0900BD2686 /* CCTextFieldDelegate.m in Sources */,
+				75089EB919D8D0EC0050A899 /* CCCarTableViewCell.m in Sources */,
 				75CB2E0C19CDB0B10010A59F /* CCCarManaged.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
