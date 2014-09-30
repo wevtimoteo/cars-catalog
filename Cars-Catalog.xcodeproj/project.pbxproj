@@ -17,6 +17,7 @@
 		751D46D719CFAFFF006AAF71 /* CCUIPickerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 751D46D619CFAFFF006AAF71 /* CCUIPickerButton.m */; };
 		751D46DA19CFB2AB006AAF71 /* CCRequiredPickerButtonDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 751D46D919CFB2AB006AAF71 /* CCRequiredPickerButtonDelegate.m */; };
 		751D46DC19D0FF5C006AAF71 /* CCCarsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 751D46DB19D0FF5C006AAF71 /* CCCarsViewControllerTests.m */; };
+		751D46DE19D114F5006AAF71 /* CCCarsRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 751D46DD19D114F5006AAF71 /* CCCarsRequestTests.m */; };
 		754F02BA19C61162006AB654 /* CCCarFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F02B819C61162006AB654 /* CCCarFormViewController.m */; };
 		754F02BB19C61162006AB654 /* CCCarFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754F02B919C61162006AB654 /* CCCarFormViewController.xib */; };
 		754F02BE19C62FDF006AB654 /* CCCarRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F02BD19C62FDF006AB654 /* CCCarRequest.m */; };
@@ -81,6 +82,7 @@
 		751D46D819CFB2AB006AAF71 /* CCRequiredPickerButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRequiredPickerButtonDelegate.h; sourceTree = "<group>"; };
 		751D46D919CFB2AB006AAF71 /* CCRequiredPickerButtonDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRequiredPickerButtonDelegate.m; sourceTree = "<group>"; };
 		751D46DB19D0FF5C006AAF71 /* CCCarsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarsViewControllerTests.m; sourceTree = "<group>"; };
+		751D46DD19D114F5006AAF71 /* CCCarsRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarsRequestTests.m; sourceTree = "<group>"; };
 		754F02B719C61162006AB654 /* CCCarFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCarFormViewController.h; sourceTree = "<group>"; };
 		754F02B819C61162006AB654 /* CCCarFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCarFormViewController.m; sourceTree = "<group>"; };
 		754F02B919C61162006AB654 /* CCCarFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCCarFormViewController.xib; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 		7569DD3F19BB6D61004C502C /* Cars-CatalogTests */ = {
 			isa = PBXGroup;
 			children = (
+				751D46DD19D114F5006AAF71 /* CCCarsRequestTests.m */,
 				751D46DB19D0FF5C006AAF71 /* CCCarsViewControllerTests.m */,
 				75A16FE019C31476001708A7 /* CCCarTests.m */,
 				750471A519DA571500486AD0 /* CCTextFieldDelegateTests.m */,
@@ -566,6 +569,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				750471A619DA571500486AD0 /* CCTextFieldDelegateTests.m in Sources */,
+				751D46DE19D114F5006AAF71 /* CCCarsRequestTests.m in Sources */,
 				75A16FE119C31476001708A7 /* CCCarTests.m in Sources */,
 				751D46DC19D0FF5C006AAF71 /* CCCarsViewControllerTests.m in Sources */,
 			);
