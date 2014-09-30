@@ -274,8 +274,8 @@
 			children = (
 				751D46DB19D0FF5C006AAF71 /* CCCarsViewControllerTests.m */,
 				75A16FE019C31476001708A7 /* CCCarTests.m */,
-				7569DD4019BB6D61004C502C /* Supporting Files */,
 				750471A519DA571500486AD0 /* CCTextFieldDelegateTests.m */,
+				7569DD4019BB6D61004C502C /* Supporting Files */,
 			);
 			path = "Cars-CatalogTests";
 			sourceTree = "<group>";
